@@ -3,11 +3,13 @@ import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router';
 import App from '../src/App.vue'
 import CAD from '../src/CAD.vue'
+import Community from '../src/Community.vue'
 import Unity from '../src/Unity.vue'
 
 const routes = [
  { path: '/cad', component: CAD },
  { path: '/unity', component: Unity },
+  { path: '/community', component: Community },
 ];
 const router = createRouter({
  history: createWebHistory(),
