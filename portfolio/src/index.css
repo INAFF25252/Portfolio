@@ -4,16 +4,33 @@
 @tailwind utilities;
 
 body {
-    padding-left: 11em;
     font-family: Georgia, "Times New Roman",
           Times, serif;
-    color: #F7FFF7;
-    background-color: #292F36 }
+    color: #FF8811;
+    background-color: #221E22
+}
+
+title {
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: #FF8811;
+    background-color: #221E22
+}
+
+
+.flexbox {
+    background-color: #FF8811;
+}
+
 ul.navbar {
     position: absolute;
     top: 2em;
     left: 1em;
-    width: 9em }
+    width: 9em 
+}
+
 h1 {
+    color: #221E22;
     font-family: Helvetica, Geneva, Arial,
-          SunSans-Regular, sans-serif }
+          SunSans-Regular, sans-serif 
+        }
