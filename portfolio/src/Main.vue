@@ -15,33 +15,41 @@
 
   <section id="projects" class="flexbox flex justify-center content-evenly py-16">
     <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-orange-600 mb-10 text-center">Projects</h3>
+      <h3 class="text-3xl font-bold text-[#221E22] mb-10 text-center">Projects</h3>
       <div class="grid md:grid-cols-3 gap-8">
   
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250" alt="Project 1" class="rounded-t-lg">
+      <router-link to="/CAD" class="text-orange-600 mb-4">
+        <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
+              hover:scale-105 hover:shadow-xl">
+          <img src="\public\images\Padoga.jpeg" alt="Project 1" class="rounded-t-lg card-img-top img-fluid">
           <div class="p-5">
-            <router-link to="/CAD" class="text-orange-600 mb-4">CAD Work</router-link>
+           CAD Work
             <p class="text-orange-600 mb-4">A short description of the project goes here.</p>
           </div>
         </div>
+        </router-link>
        
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://via.placeholder.com/400x250" alt="Project 2" class="rounded-t-lg">
+       <router-link to="/Unity" class="text-orange-600 mb-4">
+        <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
+              hover:scale-105 hover:shadow-xl">
+          <img src="\public\images\Unity.png" alt="Project 2" class="rounded-t-lg card-img-top img-fluid">
           <div class="p-5">
-           <router-link to="/Unity" class="text-orange-600 mb-4">Unity Work</router-link>
+           Unity Work
             <p class="text-orange-600 mb-4">Another project description here.</p>
+          </div>
+        </div>
+      </router-link>
 
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow hover:shadow-lg transition">
-          <img src="https://via.splaceholder.com/400x250" alt="Project 3" class="rounded-t-lg">
+        <router-link to="/Community" class="text-orange-600 mb-4">
+        <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
+              hover:scale-105 hover:shadow-xl">
+          <img src="\public\images\PetPastel.jpeg" alt="Project 3" class="rounded-t-lg card-img-top img-fluid">
           <div class="p-5">
-              <router-link to="/Community" class="text-orange-600 mb-4">Community Service</router-link>
+              Community Service
             <p class="text-orange-600 mb-4" >Another project description here.</p>
-           
           </div>
         </div>
+        </router-link>
       </div>
     </div>
   </section>
