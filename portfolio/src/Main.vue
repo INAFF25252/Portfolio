@@ -14,7 +14,7 @@
   </section>
 
   <section id="projects" class="flexbox flex justify-center content-evenly py-16">
-    <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-10xl mx-auto px-4">
       <h3 class="text-3xl font-bold text-[#221E22] mb-10 text-center">Projects</h3>
       <div class="grid md:grid-cols-3 gap-8">
   
@@ -40,16 +40,53 @@
         </div>
       </router-link>
 
-        <router-link to="/Community" class="text-orange-600 mb-4">
+        <router-link to="/PetPastel" class="text-orange-600 mb-4">
         <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
               hover:scale-105 hover:shadow-xl">
           <img src="\public\images\PetPastel.jpeg" alt="Project 3" class="rounded-t-lg card-img-top img-fluid">
           <div class="p-5">
-              Community Service
+              Pet Pastel
             <p class="text-orange-600 mb-4" >Another project description here.</p>
           </div>
         </div>
         </router-link>
+
+        
+        <router-link to="/Art" class="text-orange-600 mb-4">
+        <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
+              hover:scale-105 hover:shadow-xl">
+          <img src="\public\images\Art.JPG" alt="Project 3" class="rounded-t-lg card-img-top img-fluid">
+          <div class="p-5">
+              Art Works
+            <p class="text-orange-600 mb-4" >Another project description here.</p>
+          </div>
+        </div>
+        </router-link>
+
+        
+        <router-link to="/Music" class="text-orange-600 mb-4">
+        <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
+              hover:scale-105 hover:shadow-xl">
+          <img src="\public\images\Mall.JPG" alt="Project 3" class="rounded-t-lg card-img-top img-fluid">
+          <div class="p-5">
+              Music Activities
+            <p class="text-orange-600 mb-4" >Another project description here.</p>
+          </div>
+        </div>
+        </router-link>
+
+        
+        <router-link to="/CuddleBox" class="text-orange-600 mb-4">
+        <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
+              hover:scale-105 hover:shadow-xl">
+          <img src="\public\images\CuddleBox.PNG" alt="Project 3" class="rounded-t-lg card-img-top img-fluid">
+          <div class="p-5">
+              CuddleBox
+            <p class="text-orange-600 mb-4" >Another project description here.</p>
+          </div>
+        </div>
+        </router-link>
+
       </div>
     </div>
   </section>
