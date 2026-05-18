@@ -39,3 +39,10 @@ h1 {
     font-family: Helvetica, Geneva, Arial,
           SunSans-Regular, sans-serif 
         }
+
+        h2 {
+    color: #FF8811;
+    font-size: 3rem;
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif 
+        }

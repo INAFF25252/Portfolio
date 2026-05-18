@@ -9,9 +9,11 @@ import Unity from '../src/Unity.vue'
 import Art from '../src/Art.vue'
 import CuddleBox from '../src/CuddleBox.vue'
 import Music from '../src/Music.vue'
+import About from '../src/About.vue'
 
 const routes = [
   { path: '/', component: Main},
+   { path: '/About', component: About},
  { path: '/cad', component: CAD },
  { path: '/unity', component: Unity },
   { path: '/PetPastel', component: PetPastel },

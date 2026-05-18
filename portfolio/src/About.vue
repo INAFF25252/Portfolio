@@ -3,7 +3,7 @@
 
 <template>
   <div>
-  <router-view> </router-view>
+<h2>Hi, I'm Chen Xi. I'm interest in the arts, from music, visual, to 3D.</h2>
 </div>
 
 </template>
