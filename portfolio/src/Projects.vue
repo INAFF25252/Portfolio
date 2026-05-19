@@ -2,17 +2,6 @@
 
 
 <template>
-  <div>
-<router-view> </router-view>
-</div>
-
-  <section id="about" class="max-w-5xl mx-auto px-4 py-16">
-    <h1 class="text-3xl font-bold mb-6 text-center">Chen Xi He</h1>
-    <h2 class="mb-6 text-center">  
-    <router-link to="/About" class="mb-4 transition-transform transition-shadow duration-300 ease-outmhover:scale-105 hover:shadow-xl text-center">About</router-link>
-    </h2>
-    
-  </section>
 
   <section id="projects" class="flexbox flex justify-center content-evenly py-16">
     <div class="max-w-10xl mx-auto px-4">

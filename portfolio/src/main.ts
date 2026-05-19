@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router';
 import App from '../src/App.vue'
-import Main from '../src/Main.vue'
+import Projects from '../src/Projects.vue'
 import CAD from '../src/CAD.vue'
 import PetPastel from '../src/PetPastel.vue'
 import Unity from '../src/Unity.vue'
@@ -12,7 +12,8 @@ import Music from '../src/Music.vue'
 import About from '../src/About.vue'
 
 const routes = [
-  { path: '/', component: Main},
+  { path: '/', component: App},
+  { path: '/Projects', component: Projects},
    { path: '/About', component: About},
  { path: '/cad', component: CAD },
  { path: '/unity', component: Unity },
