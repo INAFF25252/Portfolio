@@ -1,6 +1,6 @@
-import { createApp } from 'vue';
+import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router'
 import App from '../src/App.vue'
 import Projects from '../src/Projects.vue'
 import CAD from '../src/CAD.vue'
@@ -12,22 +12,22 @@ import Music from '../src/Music.vue'
 import About from '../src/About.vue'
 
 const routes = [
-  { path: '/', component: App},
-  { path: '/Projects', component: Projects},
-   { path: '/About', component: About},
- { path: '/cad', component: CAD },
- { path: '/unity', component: Unity },
+  { path: '/', component: App },
+  { path: '/Projects', component: Projects },
+  { path: '/About', component: About },
+  { path: '/cad', component: CAD },
+  { path: '/unity', component: Unity },
   { path: '/PetPastel', component: PetPastel },
-   { path: '/art', component: Art},
-    { path: '/CuddleBox', component: CuddleBox},
-     { path: '/Music', component: Music},
-];
+  { path: '/art', component: Art },
+  { path: '/CuddleBox', component: CuddleBox },
+  { path: '/Music', component: Music },
+]
 const router = createRouter({
- history: createWebHistory(),
- routes,
-});
+  history: createWebHistory(),
+  routes,
+})
 
-const app = createApp(App);
-app.use(router);
-app.use(createPinia());
-app.mount('#app');
+const app = createApp(App)
+app.use(router)
+app.use(createPinia())
+app.mount('#app')

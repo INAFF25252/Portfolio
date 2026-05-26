@@ -2,9 +2,7 @@
 
 <template>
   <h1>CuddleBox</h1>
-  <p>
-  
-  </p>
+  <p></p>
 </template>
 
 <style scoped></style>
