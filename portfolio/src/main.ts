@@ -10,6 +10,7 @@ import Art from '../src/Art.vue'
 import CuddleBox from '../src/CuddleBox.vue'
 import Music from '../src/Music.vue'
 import About from '../src/About.vue'
+import Portfolio from '../src/Portfolio.vue'
 
 const routes = [
   { path: '/', component: App },
@@ -19,6 +20,7 @@ const routes = [
   { path: '/unity', component: Unity },
   { path: '/PetPastel', component: PetPastel },
   { path: '/art', component: Art },
+  { path: '/art/portfolio', component: Portfolio },
   { path: '/CuddleBox', component: CuddleBox },
   { path: '/Music', component: Music },
 ]

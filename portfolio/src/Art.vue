@@ -6,14 +6,17 @@
       <h3 class="text-3xl font-bold text-[#221E22] mb-10 text-center">Art Projects</h3>
       <div class="grid md:grid-cols-3 gap-8">
        
-        <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
+         <router-link to="/art/portfolio" class="text-orange-600 mb-4">
+          <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
               hover:scale-105 hover:shadow-xl">
-          <img src="\public\images\Unity.png" alt="Project 2" class="rounded-t-lg card-img-top img-fluid">
+          <img src="\public\images\IMG_2981.JPG" alt="Project 2" class="rounded-t-lg card-img-top img-fluid">
           <div class="p-5">
           Portfolio
             <p class="text-orange-600 mb-4">Another project description here.</p>
           </div>
         </div>
+        </router-link>
+
 
  <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
               hover:scale-105 hover:shadow-xl">
@@ -36,6 +39,15 @@
          </div>
         </div>
   </section>
+
+  <h2>Art Awards</h2>
+<p>Celebrating Arts 2025 Top 10</p>
+<p>Scholastic National Gold Award: Digital Art</p>
+<p>Scholastic Gold x1, Silver x4, Bronze x2, HM x1 (2024)</p>
+<p>Congressional Art Contest Co-Winner</p>
+<p>St. Gaudens Medal from The School Art League.</p>
+<p>Bow Seat International Honorable Mention</p>
+<p>Borough Arts Festival First Place</p>
 </template>
 
 <style scoped></style>

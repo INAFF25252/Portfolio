@@ -53,7 +53,7 @@
           </div>
         </router-link>
 
-        <router-link to="/Art" class="text-orange-600 mb-4">
+        <router-link to="/art" class="text-orange-600 mb-4">
           <div
             class="bg-white rounded-lg shadow transition-transform transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-xl"
           >
