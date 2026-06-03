@@ -1,134 +1,83 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const projects = [
+  {
+    title: 'CAD Work',
+    description: 'Rendered models and design studies exploring form, balance, and presentation.',
+    image: '/images/Padoga.jpeg',
+    alt: 'CAD project model',
+    to: '/cad',
+  },
+  {
+    title: 'Unity Work',
+    description: 'Interactive experiments and real-time experiences built in Unity.',
+    image: '/images/Unity.png',
+    alt: 'Unity project screenshot',
+    to: '/unity',
+  },
+  {
+    title: 'Pet Pastel',
+    description: 'A creative brand concept with playful visuals and pet-focused illustration.',
+    image: '/images/PetPastel.jpeg',
+    alt: 'Pet Pastel artwork',
+    to: '/pet-pastel',
+  },
+  {
+    title: 'Art Works',
+    description: 'Studio artwork, awards, and visual explorations across media.',
+    image: '/images/Art.JPG',
+    alt: 'Artwork portfolio preview',
+    to: '/art',
+  },
+  {
+    title: 'Music Activities',
+    description: 'Performances and music-centered activities connected to creative practice.',
+    image: '/images/Mall.JPG',
+    alt: 'Music activity photo',
+    to: '/music',
+  },
+  {
+    title: 'CuddleBox',
+    description: 'A product idea focused on comfort, care, and thoughtful interaction.',
+    image: '/images/CuddleBox.PNG',
+    alt: 'CuddleBox project preview',
+    to: '/cuddle-box',
+  },
+]
+</script>
 
 <template>
-  <section id="projects" class="flexbox flex justify-center content-evenly py-16">
-    <div class="max-w-10xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-[#221E22] mb-10 text-center">Projects</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <router-link to="/CAD" class="text-orange-600 mb-4">
-          <div
-            class="bg-white rounded-lg shadow transition-transform transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-xl"
-          >
-            <img
-              src="\public\images\Padoga.jpeg"
-              alt="Project 1"
-              class="rounded-t-lg card-img-top img-fluid"
-            />
-            <div class="p-5">
-              CAD Work
-              <p class="text-orange-600 mb-4">A short description of the project goes here.</p>
-            </div>
-          </div>
-        </router-link>
+  <section id="projects" class="bg-orange-50 px-6 py-16 text-[#221e22] lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">
+          Portfolio
+        </p>
+        <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Projects</h1>
+        <p class="mt-4 text-lg leading-8 text-stone-700">
+          A collection of creative, technical, and interactive work across art, design, and music.
+        </p>
+      </div>
 
-        <router-link to="/Unity" class="text-orange-600 mb-4">
-          <div
-            class="bg-white rounded-lg shadow transition-transform transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-xl"
-          >
-            <img
-              src="\public\images\Unity.png"
-              alt="Project 2"
-              class="rounded-t-lg card-img-top img-fluid"
-            />
-            <div class="p-5">
-              Unity Work
-              <p class="text-orange-600 mb-4">Another project description here.</p>
-            </div>
-          </div>
-        </router-link>
-
-        <router-link to="/PetPastel" class="text-orange-600 mb-4">
-          <div
-            class="bg-white rounded-lg shadow transition-transform transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-xl"
-          >
-            <img
-              src="\public\images\PetPastel.jpeg"
-              alt="Project 3"
-              class="rounded-t-lg card-img-top img-fluid"
-            />
-            <div class="p-5">
-              Pet Pastel
-              <p class="text-orange-600 mb-4">Another project description here.</p>
-            </div>
-          </div>
-        </router-link>
-
-        <router-link to="/art" class="text-orange-600 mb-4">
-          <div
-            class="bg-white rounded-lg shadow transition-transform transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-xl"
-          >
-            <img
-              src="\public\images\Art.JPG"
-              alt="Project 3"
-              class="rounded-t-lg card-img-top img-fluid"
-            />
-            <div class="p-5">
-              Art Works
-              <p class="text-orange-600 mb-4">Another project description here.</p>
-            </div>
-          </div>
-        </router-link>
-
-        <router-link to="/Music" class="text-orange-600 mb-4">
-          <div
-            class="bg-white rounded-lg shadow transition-transform transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-xl"
-          >
-            <img
-              src="\public\images\Mall.JPG"
-              alt="Project 3"
-              class="rounded-t-lg card-img-top img-fluid"
-            />
-            <div class="p-5">
-              Music Activities
-              <p class="text-orange-600 mb-4">Another project description here.</p>
-            </div>
-          </div>
-        </router-link>
-
-        <router-link to="/CuddleBox" class="text-orange-600 mb-4">
-          <div
-            class="bg-white rounded-lg shadow transition-transform transition-shadow duration-300 ease-out hover:scale-105 hover:shadow-xl"
-          >
-            <img
-              src="\public\images\CuddleBox.PNG"
-              alt="Project 3"
-              class="rounded-t-lg card-img-top img-fluid"
-            />
-            <div class="p-5">
-              CuddleBox
-              <p class="text-orange-600 mb-4">Another project description here.</p>
-            </div>
+      <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <router-link
+          v-for="project in projects"
+          :key="project.to"
+          :to="project.to"
+          class="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-orange-950/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+        >
+          <img :src="project.image" :alt="project.alt" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <h2 class="text-2xl font-black text-[#221e22]">{{ project.title }}</h2>
+            <p class="mt-3 text-sm leading-6 text-stone-600">{{ project.description }}</p>
+            <span
+              class="mt-5 inline-flex text-sm font-bold uppercase tracking-widest text-orange-600 group-hover:text-orange-800"
+            >
+              View project
+            </span>
           </div>
         </router-link>
       </div>
     </div>
-  </section>
-
-  <section id="contact" class="max-w-4xl mx-auto px-4 py-16">
-    <h3 class="text-3xl font-bold mb-6 text-center">Contact Me</h3>
-    <form class="space-y-4 max-w-lg mx-auto">
-      <input
-        type="text"
-        placeholder="Your Name"
-        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        required
-      />
-      <input
-        type="email"
-        placeholder="Your Email"
-        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        required
-      />
-      <textarea
-        placeholder="Your Message"
-        rows="5"
-        class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        required
-      ></textarea>
-      <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">
-        Send
-      </button>
-    </form>
   </section>
 </template>
 
