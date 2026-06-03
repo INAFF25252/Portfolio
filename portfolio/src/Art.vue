@@ -1,53 +1,79 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const artProjects = [
+  {
+    title: 'Portfolio',
+    description: 'Selected drawings, paintings, and visual art pieces.',
+    image: '/images/IMG_2981.JPG',
+    alt: 'Visual artwork preview',
+    to: '/art/portfolio',
+  },
+  {
+    title: 'Logo Works',
+    description: 'Logo concepts and brand marks with source images.',
+    image: '/images/Padoga.jpeg',
+    alt: 'Logo work preview',
+    to: '/art/logo',
+  },
+  {
+    title: 'Door Painting Club',
+    description: 'Collaborative painting work and decorative art projects.',
+    image: '/images/PetPastel.jpeg',
+    alt: 'Door painting club preview',
+  },
+]
+
+const awards = [
+  'Celebrating Arts 2025 Top 10',
+  'Scholastic National Gold Award: Digital Art',
+  'Scholastic Gold x1, Silver x4, Bronze x2, HM x1 (2024)',
+  'Congressional Art Contest Co-Winner',
+  'St. Gaudens Medal from The School Art League',
+  'Bow Seat International Honorable Mention',
+  'Borough Arts Festival First Place',
+]
+</script>
 
 <template>
-    <section id="projects" class="flexbox flex justify-center content-evenly py-16">
-    <div class="max-w-10xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-[#221E22] mb-10 text-center">Art Projects</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-       
-         <router-link to="/art/portfolio" class="text-orange-600 mb-4">
-          <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
-              hover:scale-105 hover:shadow-xl">
-          <img src="\public\images\IMG_2981.JPG" alt="Project 2" class="rounded-t-lg card-img-top img-fluid">
-          <div class="p-5">
-          Portfolio
-            <p class="text-orange-600 mb-4">Another project description here.</p>
+  <section class="bg-orange-50 px-6 py-16 text-[#221e22] lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Gallery</p>
+        <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Art Projects</h1>
+        <p class="mt-4 text-lg leading-8 text-stone-700">
+          Explore portfolio artwork, logo design, and collaborative art projects.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <component
+          :is="project.to ? 'router-link' : 'article'"
+          v-for="project in artProjects"
+          :key="project.title"
+          :to="project.to"
+          class="group overflow-hidden rounded-3xl bg-white shadow-lg shadow-orange-950/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+        >
+          <img :src="project.image" :alt="project.alt" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <h2 class="text-2xl font-black text-[#221e22]">{{ project.title }}</h2>
+            <p class="mt-3 text-sm leading-6 text-stone-600">{{ project.description }}</p>
+            <span
+              v-if="project.to"
+              class="mt-5 inline-flex text-sm font-bold uppercase tracking-widest text-orange-600 group-hover:text-orange-800"
+            >
+              View project
+            </span>
           </div>
-        </div>
-        </router-link>
+        </component>
+      </div>
 
-
- <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
-              hover:scale-105 hover:shadow-xl">
-          <img src="\public\images\Padoga.jpeg" alt="Project 1" class="rounded-t-lg card-img-top img-fluid">
-          <div class="p-5">
-          Logo Work
-            <p class="text-orange-600 mb-4">A short description of the project goes here.</p>
-          </div>
-        </div>
-
-
-        <div class="bg-white rounded-lg shadow  transition-transform transition-shadow duration-300 ease-out
-              hover:scale-105 hover:shadow-xl">
-          <img src="\public\images\PetPastel.jpeg" alt="Project 3" class="rounded-t-lg card-img-top img-fluid">
-          <div class="p-5">
-          Door Painting Club
-            <p class="text-orange-600 mb-4" >Another project description here.</p>
-          </div>
-        </div>
-         </div>
-        </div>
+      <section class="mt-16 rounded-3xl bg-[#221e22] p-8 text-orange-50 shadow-xl">
+        <h2 class="text-3xl font-black">Art Awards</h2>
+        <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+          <li v-for="award in awards" :key="award" class="rounded-2xl bg-white/10 px-4 py-3">
+            {{ award }}
+          </li>
+        </ul>
+      </section>
+    </div>
   </section>
-
-  <h2>Art Awards</h2>
-<p>Celebrating Arts 2025 Top 10</p>
-<p>Scholastic National Gold Award: Digital Art</p>
-<p>Scholastic Gold x1, Silver x4, Bronze x2, HM x1 (2024)</p>
-<p>Congressional Art Contest Co-Winner</p>
-<p>St. Gaudens Medal from The School Art League.</p>
-<p>Bow Seat International Honorable Mention</p>
-<p>Borough Arts Festival First Place</p>
 </template>
-
-<style scoped></style>
