@@ -33,13 +33,6 @@
         </div>
       </div>
 
-      <div class="rounded-[2rem] border border-orange-300/20 bg-white/10 p-4 shadow-2xl shadow-black/30 backdrop-blur">
-        <img
-          src="/images/Art.JPG"
-          alt="Featured artwork by Chen Xi He"
-          class="h-[28rem] w-full rounded-[1.5rem] object-cover"
-        />
-      </div>
     </div>
   </section>
 
