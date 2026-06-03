@@ -1,26 +1,34 @@
 <script setup lang="ts">
-console.log('rendered')
+const navItems = [
+  { label: 'Home', to: '/' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'About', to: '/about' },
+]
 </script>
 
 <template>
-  <div>
-    <h1 class="text-3xl font-bold mb-6 text-center">Chen Xi He</h1>
-    <h2 class="mb-6 text-center">
-      <router-link
-        to="/About"
-        class="mb-4 transition-transform transition-shadow duration-300 ease-outmhover:scale-105 hover:shadow-xl text-center"
-        >About</router-link
-      >
-    </h2>
-    <
-    <h2 class="mb-6 text-center">
-      <router-link
-        to="/Projects"
-        class="mb-4 transition-transform transition-shadow duration-300 ease-outmhover:scale-105 hover:shadow-xl text-center"
-        >Projects</router-link
-      >
-    </h2>
-  </div>
+  <header class="sticky top-0 z-50 border-b border-orange-300/20 bg-[#221e22]/90 backdrop-blur">
+    <nav
+      class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8"
+      aria-label="Main navigation"
+    >
+      <router-link to="/" class="text-lg font-black uppercase tracking-[0.25em] text-orange-300">
+        Chen Xi He
+      </router-link>
+
+      <div class="flex items-center gap-2 sm:gap-4">
+        <router-link
+          v-for="item in navItems"
+          :key="item.to"
+          :to="item.to"
+          class="rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-wider text-orange-100 transition hover:bg-orange-300 hover:text-[#221e22]"
+          active-class="bg-orange-500 text-[#221e22]"
+        >
+          {{ item.label }}
+        </router-link>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <style scoped></style>

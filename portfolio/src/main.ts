@@ -1,28 +1,30 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
-import App from '../src/App.vue'
-import Projects from '../src/Projects.vue'
-import CAD from '../src/CAD.vue'
-import PetPastel from '../src/PetPastel.vue'
-import Unity from '../src/Unity.vue'
-import Art from '../src/Art.vue'
-import CuddleBox from '../src/CuddleBox.vue'
-import Music from '../src/Music.vue'
-import About from '../src/About.vue'
-import Portfolio from '../src/Portfolio.vue'
+import './index.css'
+import App from './App.vue'
+import Home from './Home.vue'
+import Projects from './Projects.vue'
+import CAD from './CAD.vue'
+import PetPastel from './PetPastel.vue'
+import Unity from './Unity.vue'
+import Art from './Art.vue'
+import CuddleBox from './CuddleBox.vue'
+import Music from './Music.vue'
+import About from './About.vue'
+import Portfolio from './Portfolio.vue'
 
 const routes = [
-  { path: '/', component: App },
-  { path: '/Projects', component: Projects },
-  { path: '/About', component: About },
-  { path: '/cad', component: CAD },
-  { path: '/unity', component: Unity },
-  { path: '/PetPastel', component: PetPastel },
+  { path: '/', component: Home },
+  { path: '/projects', alias: '/Projects', component: Projects },
+  { path: '/about', alias: '/About', component: About },
+  { path: '/cad', alias: '/CAD', component: CAD },
+  { path: '/unity', alias: '/Unity', component: Unity },
+  { path: '/pet-pastel', alias: '/PetPastel', component: PetPastel },
   { path: '/art', component: Art },
   { path: '/art/portfolio', component: Portfolio },
-  { path: '/CuddleBox', component: CuddleBox },
-  { path: '/Music', component: Music },
+  { path: '/cuddle-box', alias: '/CuddleBox', component: CuddleBox },
+  { path: '/music', alias: '/Music', component: Music },
 ]
 const router = createRouter({
   history: createWebHistory(),
