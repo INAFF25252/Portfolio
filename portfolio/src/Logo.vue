@@ -26,7 +26,7 @@ const logos = [
   },
   {
     title: 'Logo 5',
-    description: 'A final logo card completing the right-side source gallery.',
+    description: 'A final logo piece completing the right-side source gallery.',
     image: '/images/Logo5.PNG',
     source: '/images/Logo5.PNG',
   },
@@ -35,39 +35,41 @@ const logos = [
 
 <template>
   <section class="bg-orange-50 px-6 py-16 text-[#221e22] lg:px-8">
-    <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-      <aside class="rounded-3xl bg-[#221e22] p-8 text-orange-50 shadow-xl">
-        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-300">Art</p>
+    <div class="mx-auto max-w-6xl">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Art</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Logo Works</h1>
-        <p class="mt-5 text-base leading-7 text-orange-100">
-          A collection of logo-focused pieces and brand marks. Each card on the right shows the
-          logo image and the public image source used by the portfolio.
+        <p class="mt-4 text-lg leading-8 text-stone-700">
+          A collection of logo-focused pieces and brand marks with right-side captions.
         </p>
+      </div>
 
-        <div class="mt-8 space-y-4">
-          <div v-for="logo in logos" :key="logo.source" class="rounded-2xl bg-white/10 p-4">
-            <h2 class="font-bold text-orange-200">{{ logo.title }}</h2>
-            <p class="mt-1 break-all text-sm text-orange-100">{{ logo.source }}</p>
-          </div>
-        </div>
-      </aside>
-
-      <div class="grid gap-6 sm:grid-cols-2">
+      <div class="mt-14 space-y-14">
         <article
           v-for="logo in logos"
           :key="logo.title"
-          class="overflow-hidden rounded-3xl bg-white shadow-lg shadow-orange-950/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+          class="grid gap-6 lg:grid-cols-[0.7fr_1fr] lg:items-start"
         >
-          <div class="flex h-64 items-center justify-center bg-stone-100 p-6">
-            <img :src="logo.image" :alt="logo.title" class="max-h-full max-w-full object-contain" />
+          <div class="lg:pt-8">
+            <p class="text-sm font-bold uppercase tracking-[0.3em] text-orange-600">Logo</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight">{{ logo.title }}</h2>
           </div>
-          <div class="p-6">
-            <h2 class="text-2xl font-black">{{ logo.title }}</h2>
-            <p class="mt-3 text-sm leading-6 text-stone-600">{{ logo.description }}</p>
-            <p class="mt-4 break-all rounded-2xl bg-orange-50 px-4 py-3 text-xs font-semibold text-orange-700">
-              Source: {{ logo.source }}
-            </p>
-          </div>
+
+          <figure class="w-full lg:justify-self-end">
+            <img
+              :src="logo.image"
+              :alt="logo.title"
+              class="ml-auto max-h-[28rem] w-full object-contain"
+            />
+            <figcaption class="ml-auto mt-4 max-w-2xl text-right text-sm leading-6 text-orange-700">
+              {{ logo.description }}
+              <span
+                class="mt-2 block break-all text-xs font-semibold uppercase tracking-widest text-stone-500"
+              >
+                Source: {{ logo.source }}
+              </span>
+            </figcaption>
+          </figure>
         </article>
       </div>
     </div>
