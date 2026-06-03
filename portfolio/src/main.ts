@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
+import './index.css'
 import App from './App.vue'
 import Home from './Home.vue'
 import Projects from './Projects.vue'
