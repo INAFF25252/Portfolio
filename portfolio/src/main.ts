@@ -13,6 +13,7 @@ import CuddleBox from './CuddleBox.vue'
 import Music from './Music.vue'
 import About from './About.vue'
 import Portfolio from './Portfolio.vue'
+import Logo from './Logo.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -23,6 +24,7 @@ const routes = [
   { path: '/pet-pastel', alias: '/PetPastel', component: PetPastel },
   { path: '/art', component: Art },
   { path: '/art/portfolio', component: Portfolio },
+  { path: '/art/logo', component: Logo },
   { path: '/cuddle-box', alias: '/CuddleBox', component: CuddleBox },
   { path: '/music', alias: '/Music', component: Music },
 ]
