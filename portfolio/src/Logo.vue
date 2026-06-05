@@ -15,8 +15,8 @@ const logos = [
   {
     title: 'Logo 3',
     description: 'A larger rendered logo image for the gallery collection.',
-    image: '/images/Logo3.png',
-    source: '/images/Logo3.png',
+    image: '/images/Logo.PNG',
+    source: '/images/Logo.PNG',
   },
   {
     title: 'Logo 4',
@@ -40,7 +40,7 @@ const logos = [
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Art</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Logo Works</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          A collection of logo-focused pieces and brand marks with right-side captions.
+          A collection of logo-focused pieces and brand marks with left-side captions.
         </p>
       </div>
 
@@ -53,6 +53,14 @@ const logos = [
           <div class="lg:pt-8">
             <p class="text-sm font-bold uppercase tracking-[0.3em] text-orange-600">Logo</p>
             <h2 class="mt-3 text-3xl font-black tracking-tight">{{ logo.title }}</h2>
+            <p class="mt-4 max-w-2xl text-sm leading-6 text-orange-700">
+              {{ logo.description }}
+              <span
+                class="mt-2 block break-all text-xs font-semibold uppercase tracking-widest text-stone-500"
+              >
+                Source: {{ logo.source }}
+              </span>
+            </p>
           </div>
 
           <figure class="w-full lg:justify-self-end">
@@ -61,14 +69,6 @@ const logos = [
               :alt="logo.title"
               class="ml-auto max-h-[28rem] w-full object-contain"
             />
-            <figcaption class="ml-auto mt-4 max-w-2xl text-right text-sm leading-6 text-orange-700">
-              {{ logo.description }}
-              <span
-                class="mt-2 block break-all text-xs font-semibold uppercase tracking-widest text-stone-500"
-              >
-                Source: {{ logo.source }}
-              </span>
-            </figcaption>
           </figure>
         </article>
       </div>
