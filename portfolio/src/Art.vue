@@ -17,7 +17,7 @@ const artProjects = [
   {
     title: 'Door Painting Club',
     description: 'Collaborative painting work and decorative art projects.',
-    image: '/images/PetPastel.jpeg',
+    image: '/images/DoorPainting.jpeg',
     alt: 'Door painting club preview',
     to: '/art/door-painting-club',
   },

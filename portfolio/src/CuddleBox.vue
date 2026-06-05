@@ -28,7 +28,7 @@ const mediaItems: MediaItem[] = [
     title: 'Platypus Popper Kit',
     description:
       'The full craft kit layout with pattern pieces, fabric, stuffing, and tools for making a plush platypus.',
-    src: '/images/CuddleBox2.JPG',
+    src: '/images/CuddleBox2.png',
     alt: 'CuddleBox Platypus Popper craft kit contents',
   },
 ]
