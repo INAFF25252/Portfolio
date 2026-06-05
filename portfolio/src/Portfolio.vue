@@ -159,7 +159,16 @@ const artworks: Artwork[] = [
     alt: 'Portfolio artwork Art 16',
   },
   {
+    title: 'KPDH Fanart',
+    dimensions: '',
+    medium: 'Procreate',
+    description: 'I just like this piece cuz it's KPDH.',
+    image: '/images/ArtLast.PNG',
+    alt: 'Portfolio artwork sketch collage',
+  },
+  {
     title: 'The Morning After',
+    dimensions: '',
     medium: 'Procreate',
     description: 'Growing up in and leaving a denomination, the dangers of childhood marriages that many religious sectors support hit close to home. This piece showcases how after a child is forced into marriage, their ring might shine brightly, their veil might still be pure white, and the morning sun might still glow beautifully, but their entire childhood is stained (revealed by the black light) by the implications of being someone’s wife.',
     image: '/images/Art17.jpg',
@@ -167,18 +176,11 @@ const artworks: Artwork[] = [
   },
   {
     title: 'Sketchbook',
+    dimensions: '',
     medium: 'Procreate, Marker, Charcoal, Pencil:',
     description: 'A small archive of my creative process with whatever I have on hand when an idea pops up. Quick sketches, composition trials, and experimentation.',
     image: '/images/Art18.JPG',
     alt: 'Portfolio artwork Art 18',
-  },
-  {
-    title: 'Untitled Study',
-    dimensions: '',
-    medium: '',
-    description: '',
-    image: '/images/ArtLast.PNG',
-    alt: 'Portfolio artwork sketch collage',
   },
   {
     title: 'Art Gallery',
