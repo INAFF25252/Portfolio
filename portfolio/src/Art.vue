@@ -19,17 +19,39 @@ const artProjects = [
     description: 'Collaborative painting work and decorative art projects.',
     image: '/images/PetPastel.jpeg',
     alt: 'Door painting club preview',
+    to: '/art/door-painting-club',
   },
 ]
 
 const awards = [
-  'Celebrating Arts 2025 Top 10',
-  'Scholastic National Gold Award: Digital Art',
-  'Scholastic Gold x1, Silver x4, Bronze x2, HM x1 (2024)',
-  'Congressional Art Contest Co-Winner',
-  'St. Gaudens Medal from The School Art League',
-  'Bow Seat International Honorable Mention',
-  'Borough Arts Festival First Place',
+  {
+    title: 'Celebrating Arts 2025 Top 10',
+    url: 'https://www.celebratingart.com/',
+  },
+  {
+    title: 'Scholastic National Gold Award: Digital Art',
+    url: 'https://www.artandwriting.org/',
+  },
+  {
+    title: 'Scholastic Gold x1, Silver x4, Bronze x2, HM x1 (2024)',
+    url: 'https://www.artandwriting.org/',
+  },
+  {
+    title: 'Congressional Art Contest Co-Winner',
+    url: 'https://www.house.gov/educators-and-students/congressional-art-competition',
+  },
+  {
+    title: 'St. Gaudens Medal from The School Art League',
+    url: 'https://schoolartleague.org/',
+  },
+  {
+    title: 'Bow Seat International Honorable Mention',
+    url: 'https://bowseat.org/',
+  },
+  {
+    title: 'Borough Arts Festival First Place',
+    url: 'https://sites.google.com/schools.nyc.gov/nycdoe-oasp/borough-arts-festivals',
+  },
 ]
 </script>
 
@@ -69,8 +91,15 @@ const awards = [
       <section class="mt-16 rounded-3xl bg-[#221e22] p-8 text-orange-50 shadow-xl">
         <h2 class="text-3xl font-black">Art Awards</h2>
         <ul class="mt-6 grid gap-3 sm:grid-cols-2">
-          <li v-for="award in awards" :key="award" class="rounded-2xl bg-white/10 px-4 py-3">
-            {{ award }}
+          <li v-for="award in awards" :key="award.title">
+            <a
+              :href="award.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block rounded-2xl bg-white/10 px-4 py-3 transition hover:bg-white/20 hover:text-orange-200"
+            >
+              {{ award.title }}
+            </a>
           </li>
         </ul>
       </section>

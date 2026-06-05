@@ -4,5 +4,5 @@
   <h1>Music Activities</h1>
   <p></p>
 </template>
-
 <style scoped></style>
+

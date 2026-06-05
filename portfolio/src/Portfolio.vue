@@ -84,5 +84,5 @@ const artworks = [
     </div>
   </section>
 </template>
-
 <style scoped></style>
+

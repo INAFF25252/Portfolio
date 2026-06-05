@@ -4,5 +4,5 @@
   <h1>CuddleBox</h1>
   <p></p>
 </template>
-
 <style scoped></style>
+

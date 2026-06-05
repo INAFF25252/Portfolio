@@ -14,6 +14,7 @@ import Music from './Music.vue'
 import About from './About.vue'
 import Portfolio from './Portfolio.vue'
 import Logo from './Logo.vue'
+import DoorPaintingClub from './DoorPaintingClub.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -25,6 +26,7 @@ const routes = [
   { path: '/art', component: Art },
   { path: '/art/portfolio', component: Portfolio },
   { path: '/art/logo', component: Logo },
+  { path: '/art/door-painting-club', alias: '/Art/DoorPaintingClub', component: DoorPaintingClub },
   { path: '/cuddle-box', alias: '/CuddleBox', component: CuddleBox },
   { path: '/music', alias: '/Music', component: Music },
 ]
