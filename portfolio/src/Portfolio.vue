@@ -1,5 +1,54 @@
 <script setup lang="ts">
-const artworks = [
+import { ref } from 'vue'
+
+type ArtworkImage = {
+  src: string
+  alt: string
+  description?: string
+}
+
+type Artwork = {
+  title: string
+  dimensions: string
+  medium: string
+  description: string
+  image?: string
+  alt?: string
+  images?: ArtworkImage[]
+}
+
+const carouselIndices = ref<Record<string, number>>({})
+
+function getCarouselIndex(key: string) {
+  return carouselIndices.value[key] ?? 0
+}
+
+function showPrevImage(key: string, total: number) {
+  carouselIndices.value[key] = (getCarouselIndex(key) - 1 + total) % total
+}
+
+function showNextImage(key: string, total: number) {
+  carouselIndices.value[key] = (getCarouselIndex(key) + 1) % total
+}
+
+function artworkKey(artwork: Artwork) {
+  return artwork.images?.[0]?.src ?? artwork.image ?? artwork.title
+}
+
+function currentCarouselImage(artwork: Artwork) {
+  if (!artwork.images?.length) return null
+  return artwork.images[getCarouselIndex(artworkKey(artwork))]!
+}
+
+function artworkCaption(artwork: Artwork) {
+  if (artwork.images?.length) {
+    const current = currentCarouselImage(artwork)
+    return current?.description || artwork.description || ''
+  }
+  return artwork.description || ''
+}
+
+const artworks: Artwork[] = [
   {
     title: 'I See You',
     dimensions: '43cm x 28cm',
@@ -35,6 +84,80 @@ const artworks = [
     image: '/images/IMG_2981.JPG',
     alt: 'Watercolor artwork titled The Long Ride Home',
   },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    images: [
+      { src: '/images/Art8.jpg', alt: 'Portfolio artwork Art 8' },
+      { src: '/images/Art8-Sketch.PNG', alt: 'Portfolio artwork Art 8 sketch' },
+    ],
+  },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    image: '/images/Art9.JPG',
+    alt: 'Portfolio artwork Art 9',
+  },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    image: '/images/Art10.JPG',
+    alt: 'Portfolio artwork Art 10',
+  },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    image: '/images/Art11.JPG',
+    alt: 'Portfolio artwork Art 11',
+  },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    image: '/images/Art12.JPG',
+    alt: 'Portfolio artwork Art 12',
+  },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    image: '/images/Art13.JPG',
+    alt: 'Portfolio artwork Art 13',
+  },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    image: '/images/Art14.JPG',
+    alt: 'Portfolio artwork Art 14',
+  },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    image: '/images/Art15.JPG',
+    alt: 'Portfolio artwork Art 15',
+  },
+  {
+    title: 'Untitled Study',
+    dimensions: '',
+    medium: '',
+    description: '',
+    image: '/images/ArtLast.PNG',
+    alt: 'Portfolio artwork',
+  },
 ]
 </script>
 
@@ -45,14 +168,14 @@ const artworks = [
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Gallery</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Art Projects</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          Selected portfolio artwork shown with image captions on the right.
+          Selected portfolio artwork shown with image captions on the left.
         </p>
       </div>
 
       <div class="mt-14 space-y-16">
         <article
           v-for="artwork in artworks"
-          :key="artwork.image"
+          :key="artworkKey(artwork)"
           class="grid gap-6 lg:grid-cols-[0.7fr_1fr] lg:items-start"
         >
           <div class="lg:pt-8">
@@ -64,20 +187,56 @@ const artworks = [
             >
               {{ [artwork.dimensions, artwork.medium].filter(Boolean).join(' - ') }}
             </p>
+            <p
+              v-if="artworkCaption(artwork)"
+              class="mt-4 max-w-2xl text-sm leading-6 text-orange-700"
+            >
+              {{ artworkCaption(artwork) }}
+            </p>
           </div>
 
           <figure class="w-full lg:justify-self-end">
+            <div
+              v-if="artwork.images"
+              class="relative ml-auto flex w-full items-center justify-center gap-3"
+            >
+              <button
+                type="button"
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#221e22] text-orange-50 shadow-lg transition hover:bg-orange-600"
+                aria-label="Previous image"
+                @click="showPrevImage(artworkKey(artwork), artwork.images.length)"
+              >
+                ←
+              </button>
+
+              <div class="min-w-0 flex-1">
+                <img
+                  v-if="currentCarouselImage(artwork)"
+                  :src="currentCarouselImage(artwork)!.src"
+                  :alt="currentCarouselImage(artwork)!.alt"
+                  class="mx-auto max-h-[34rem] w-full object-contain"
+                />
+                <p class="mt-3 text-center text-xs font-semibold uppercase tracking-widest text-stone-500">
+                  {{ getCarouselIndex(artworkKey(artwork)) + 1 }} / {{ artwork.images.length }}
+                </p>
+              </div>
+
+              <button
+                type="button"
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#221e22] text-orange-50 shadow-lg transition hover:bg-orange-600"
+                aria-label="Next image"
+                @click="showNextImage(artworkKey(artwork), artwork.images.length)"
+              >
+                →
+              </button>
+            </div>
+
             <img
+              v-else
               :src="artwork.image"
               :alt="artwork.alt"
               class="ml-auto max-h-[34rem] w-full object-contain"
             />
-            <figcaption
-              v-if="artwork.description"
-              class="ml-auto mt-4 max-w-2xl text-right text-sm leading-6 text-orange-700"
-            >
-              {{ artwork.description }}
-            </figcaption>
           </figure>
         </article>
       </div>
