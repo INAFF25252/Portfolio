@@ -7,6 +7,17 @@ type MediaItem = {
   alt: string
 }
 
+const pressLinks = [
+  {
+    label: 'SILive Gallery',
+    url: 'https://www.silive.com/galleries/RVARCU3EXNA6JCNYGHHJ6WHGG4/',
+  },
+  {
+    label: 'peta2 — Art Show for Animal Shelters',
+    url: 'https://www.peta2.com/culture/art-show-animal-shelters/',
+  },
+]
+
 const mediaItems: MediaItem[] = [
   {
     title: 'Brand Concept',
@@ -31,11 +42,32 @@ const mediaItems: MediaItem[] = [
     alt: 'Pet Pastel illustration 2',
   },
   {
+    title: 'Volunteer Event',
+    description: 'Pet Pastel volunteers at a community animal care event.',
+    type: 'image',
+    src: '/images/PetPastel3.JPG',
+    alt: 'Pet Pastel volunteer group photo',
+  },
+  {
     title: 'Process Video',
     description: '',
     type: 'video',
     src: '/images/PetPastelVid1.MP4',
     alt: 'Pet Pastel process video',
+  },
+  {
+    title: 'Illustration 3',
+    description: '',
+    type: 'image',
+    src: '/images/PetPastel6.JPG',
+    alt: 'Pet Pastel cat portrait',
+  },
+  {
+    title: 'Illustration 4',
+    description: '',
+    type: 'image',
+    src: '/images/PetPastel7.JPG',
+    alt: 'Pet Pastel dog portrait',
   },
 ]
 </script>
@@ -49,14 +81,26 @@ const mediaItems: MediaItem[] = [
         <p class="mt-4 text-lg leading-8 text-stone-700">
           A playful pet-focused brand with illustrations and process documentation.
         </p>
-        <a
-          href="https://www.instagram.com/pet_pastel_/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-4 inline-block text-sm font-bold uppercase tracking-widest text-orange-600 transition hover:text-orange-800"
-        >
-          @pet_pastel_
-        </a>
+        <div class="mt-4 flex flex-col items-center gap-2">
+          <a
+            href="https://www.instagram.com/pet_pastel_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-bold uppercase tracking-widest text-orange-600 transition hover:text-orange-800"
+          >
+            @pet_pastel_
+          </a>
+          <a
+            v-for="link in pressLinks"
+            :key="link.url"
+            :href="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm font-bold uppercase tracking-widest text-orange-600 transition hover:text-orange-800"
+          >
+            {{ link.label }}
+          </a>
+        </div>
       </div>
 
       <div class="mt-14 space-y-16">

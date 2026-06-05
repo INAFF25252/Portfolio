@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'Art Works',
     description: 'Studio artwork, awards, and visual explorations across media.',
-    image: '/images/Art.JPG',
+    image: '/images/Art1.JPG',
     alt: 'Artwork portfolio preview',
     to: '/art',
   },

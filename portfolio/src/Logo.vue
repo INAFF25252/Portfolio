@@ -30,6 +30,13 @@ const logos = [
     image: '/images/Logo5.PNG',
     source: '/images/Logo5.PNG',
   },
+  {
+    title: 'CuddleBox',
+    description:
+      'The CuddleBox mascot and wordmark — a DIY plush craft kit brand with a playful, handmade identity.',
+    image: '/images/CuddleBox.PNG',
+    source: '/images/CuddleBox.PNG',
+  },
 ]
 </script>
 

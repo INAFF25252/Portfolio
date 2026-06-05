@@ -3,7 +3,7 @@ const artProjects = [
   {
     title: 'Portfolio',
     description: 'Selected drawings, paintings, and visual art pieces.',
-    image: '/images/IMG_2981.JPG',
+    image: '/images/Art1.JPG',
     alt: 'Visual artwork preview',
     to: '/art/portfolio',
   },
@@ -17,7 +17,7 @@ const artProjects = [
   {
     title: 'Door Painting Club',
     description: 'Collaborative painting work and decorative art projects.',
-    image: '/images/DoorPainting.jpeg',
+    image: '/images/DoorPainting7.jpg',
     alt: 'Door painting club preview',
     to: '/art/door-painting-club',
   },
@@ -25,31 +25,40 @@ const artProjects = [
 
 const awards = [
   {
-    title: 'Celebrating Arts 2025 Top 10',
+    org: 'Celebrating Arts',
+    honor: 'Top 10',
+    year: '2025',
     url: 'https://www.celebratingart.com/',
   },
   {
-    title: 'Scholastic National Gold Award: Digital Art',
+    org: 'Scholastic Art & Writing Awards',
+    honor: 'National Gold — Digital Art',
     url: 'https://www.artandwriting.org/',
   },
   {
-    title: 'Scholastic Gold x1, Silver x4, Bronze x2, HM x1 (2024)',
+    org: 'Scholastic Art & Writing Awards',
+    honor: 'Gold ×1, Silver ×4, Bronze ×2, Honorable Mention ×1',
+    year: '2024',
     url: 'https://www.artandwriting.org/',
   },
   {
-    title: 'Congressional Art Contest Co-Winner',
+    org: 'Congressional Art Competition',
+    honor: 'Co-Winner',
     url: 'https://www.house.gov/educators-and-students/congressional-art-competition',
   },
   {
-    title: 'St. Gaudens Medal from The School Art League',
+    org: 'The School Art League',
+    honor: 'St. Gaudens Medal',
     url: 'https://schoolartleague.org/',
   },
   {
-    title: 'Bow Seat International Honorable Mention',
+    org: 'Bow Seat Ocean Awareness',
+    honor: 'International Honorable Mention',
     url: 'https://bowseat.org/',
   },
   {
-    title: 'Borough Arts Festival First Place',
+    org: 'NYC Borough Arts Festival',
+    honor: 'First Place',
     url: 'https://sites.google.com/schools.nyc.gov/nycdoe-oasp/borough-arts-festivals',
   },
 ]
@@ -88,17 +97,32 @@ const awards = [
         </component>
       </div>
 
-      <section class="mt-16 rounded-3xl bg-[#221e22] p-8 text-orange-50 shadow-xl">
-        <h2 class="text-3xl font-black">Art Awards</h2>
-        <ul class="mt-6 grid gap-3 sm:grid-cols-2">
-          <li v-for="award in awards" :key="award.title">
+      <section class="mt-16">
+        <div class="text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Recognition</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">Art Awards</h2>
+        </div>
+
+        <ul
+          class="mt-10 divide-y divide-stone-200 overflow-hidden rounded-3xl bg-white shadow-lg shadow-orange-950/10"
+        >
+          <li v-for="award in awards" :key="`${award.org}-${award.honor}`">
             <a
               :href="award.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="block rounded-2xl bg-white/10 px-4 py-3 transition hover:bg-white/20 hover:text-orange-200"
+              class="group flex items-center justify-between gap-4 px-6 py-5 transition hover:bg-orange-50/60 sm:px-8"
             >
-              {{ award.title }}
+              <div class="min-w-0">
+                <p class="font-semibold text-[#221e22] group-hover:text-orange-700">{{ award.org }}</p>
+                <p class="mt-0.5 text-sm text-stone-500">{{ award.honor }}</p>
+              </div>
+              <span
+                v-if="award.year"
+                class="shrink-0 text-sm font-medium tabular-nums text-stone-400"
+              >
+                {{ award.year }}
+              </span>
             </a>
           </li>
         </ul>

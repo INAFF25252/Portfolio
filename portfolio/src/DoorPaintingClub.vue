@@ -25,6 +25,30 @@ const mediaItems: MediaItem[] = [
     src: '/images/DoorPainting3.jpg',
     alt: 'Door painting project 3',
   },
+  {
+    title: 'Door Painting 4',
+    description: '',
+    src: '/images/DoorPainting4.JPG',
+    alt: 'Door painting project 4',
+  },
+  {
+    title: 'Door Painting 5',
+    description: '',
+    src: '/images/DoorPainting5.JPG',
+    alt: 'Door painting project 5',
+  },
+  {
+    title: 'Door Painting 6',
+    description: '',
+    src: '/images/DoorPainting6.jpg',
+    alt: 'Door painting project 6',
+  },
+  {
+    title: 'Door Painting 7',
+    description: '',
+    src: '/images/DoorPainting7.jpg',
+    alt: 'Door painting project 7',
+  },
 ]
 </script>
 
@@ -37,6 +61,14 @@ const mediaItems: MediaItem[] = [
         <p class="mt-4 text-lg leading-8 text-stone-700">
           Collaborative painting work and decorative art projects.
         </p>
+        <a
+          href="https://www.instagram.com/siths_door_painting/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-block text-sm font-bold uppercase tracking-widest text-orange-600 transition hover:text-orange-800"
+        >
+          @siths_door_painting
+        </a>
       </div>
 
       <div class="mt-14 space-y-16">

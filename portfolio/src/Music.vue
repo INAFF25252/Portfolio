@@ -102,6 +102,19 @@ const mediaItems: MediaItem[] = [
     image: '/images/Music5.JPG',
     alt: 'Holiday ensemble concert performance',
   },
+  {
+    title: 'Press Feature',
+    description:
+      'Coverage of a Young Musicians/Artists of Staten Island holiday performance at a Staten Island senior center.',
+    image: '/images/Music7.JPG',
+    alt: 'Newspaper feature on young musicians performance',
+  },
+  {
+    title: 'Senior Center Performance',
+    description: 'A holiday ensemble performance for residents at a senior living community.',
+    image: '/images/Music8.JPG',
+    alt: 'Musicians performing at a senior center',
+  },
 ]
 </script>
 

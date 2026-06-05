@@ -2,6 +2,7 @@
 type MediaItem = {
   title: string
   description: string
+  type: 'image' | 'video'
   src: string
   alt: string
 }
@@ -11,6 +12,7 @@ const mediaItems: MediaItem[] = [
     title: 'Pagoda Pavilion',
     description:
       'A 3D architectural study of a traditional East Asian pavilion with stone bridges and reflective water.',
+    type: 'image',
     src: '/images/Padoga.jpeg',
     alt: 'CAD render of a pagoda pavilion over water',
   },
@@ -18,8 +20,24 @@ const mediaItems: MediaItem[] = [
     title: 'Character Model Study',
     description:
       'A low-poly character model sculpted and posed in Blender, exploring form and stylized proportions.',
+    type: 'image',
     src: '/images/CAD.jpeg',
     alt: 'Blender viewport of a stylized character model',
+  },
+  {
+    title: 'Character Render',
+    description:
+      'A polished chibi-style character render with materials, lighting, and environment design.',
+    type: 'image',
+    src: '/images/CAD1.PNG',
+    alt: 'CAD character render in a marble room',
+  },
+  {
+    title: 'CAD Demo Video',
+    description: 'A walkthrough of CAD modeling and rendering work.',
+    type: 'video',
+    src: '/images/CadVid.MP4',
+    alt: 'CAD demo video',
   },
 ]
 </script>
@@ -51,10 +69,20 @@ const mediaItems: MediaItem[] = [
 
           <figure class="w-full lg:justify-self-end">
             <img
+              v-if="item.type === 'image'"
               :src="item.src"
               :alt="item.alt"
               class="ml-auto max-h-[34rem] w-full rounded-2xl object-contain"
             />
+            <video
+              v-else
+              :src="item.src"
+              controls
+              playsinline
+              class="ml-auto max-h-[34rem] w-full rounded-2xl object-contain"
+            >
+              Your browser does not support the video tag.
+            </video>
           </figure>
         </article>
       </div>
