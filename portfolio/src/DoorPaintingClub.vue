@@ -8,46 +8,48 @@ type MediaItem = {
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'Club Overview',
-    description: 'Collaborative painting work and decorative art projects.',
-    src: '/images/DoorPainting.jpeg',
-    alt: 'Door Painting Club overview',
+    title: "Club Picture",
+    description: "Our Door Painting Club Parties!",
+    src: "/images/DoorPainting.jpeg",
+    alt: "Door Painting Club overview",
   },
   {
-    title: 'Door Painting 1',
-    description: '',
-    src: '/images/DoorPainting1.jpg',
-    alt: 'Door painting project 1',
+    title: "Classroom Bulletin Flower Mural",
+    description:
+      "A flower collage. In this picture it was almost finished. The newest photos have papers in the way.",
+    src: "/images/DoorPainting1.jpg",
+    alt: "Door painting project 1",
   },
   {
-    title: 'Door Painting 3',
-    description: '',
-    src: '/images/DoorPainting3.jpg',
-    alt: 'Door painting project 3',
+    title: "Instagram",
+    description: "A preview of the Door Painting Club Instagram Club. Link at the top of the page.",
+    src: "/images/DoorPainting3.jpg",
+    alt: "Door painting project 3",
   },
   {
-    title: 'Door Painting 4',
-    description: '',
-    src: '/images/DoorPainting4.JPG',
-    alt: 'Door painting project 4',
+    title: "Corpse Bride",
+    description: "A sample of what we paint for Halloween.",
+    src: "/images/DoorPainting4.JPG",
+    alt: "Door painting project 4",
   },
   {
-    title: 'Door Painting 5',
-    description: '',
-    src: '/images/DoorPainting5.JPG',
-    alt: 'Door painting project 5',
+    title: "Snoopy Love Letter",
+    description: "A sample of what we paint for Valentine's Day.",
+    src: "/images/DoorPainting5.JPG",
+    alt: "Door painting project 5",
   },
   {
-    title: 'Door Painting 6',
-    description: '',
-    src: '/images/DoorPainting6.jpg',
-    alt: 'Door painting project 6',
+    title: "Headless Horseman",
+    description:
+      "Some designs stay up for years, where details are updated to match the season. For this example, it was Easter.",
+    src: "/images/DoorPainting6.jpg",
+    alt: "Door painting project 6",
   },
   {
-    title: 'Door Painting 7',
-    description: '',
-    src: '/images/DoorPainting7.jpg',
-    alt: 'Door painting project 7',
+    title: "Easter Bunny",
+    description: "A sample of what we paint for Easter.",
+    src: "/images/DoorPainting7.jpg",
+    alt: "Door painting project 7",
   },
 ]
 </script>
@@ -59,7 +61,8 @@ const mediaItems: MediaItem[] = [
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Project</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Door Painting Club</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          Collaborative painting work and decorative art projects.
+          Founder of a club of 50+ members that paint large murals, seasonal door windows, and
+          bulletin boards
         </p>
         <a
           href="https://www.instagram.com/siths_door_painting/"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue"
 
 type MediaItem = {
   title: string
@@ -12,24 +12,23 @@ const isFlipped = ref(false)
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'Brand Logo',
-    description:
-      'The CuddleBox mascot and wordmark — a DIY plush craft kit brand with a playful, handmade identity.',
-    src: '/images/CuddleBox.PNG',
-    alt: 'CuddleBox brand logo',
+    title: "Brand Logo",
+    description: "The DIY plush craft kit brand logo.",
+    src: "/images/CuddleBox.PNG",
+    alt: "CuddleBox brand logo",
   },
   {
-    title: 'Product Preview',
-    description: 'A leather owl keychain alongside the CuddleBox packaging.',
-    src: '/images/CuddleBox1.JPG',
-    alt: 'CuddleBox product with owl keychain',
+    title: "Product Preview: Pepper the Owl",
+    description: "A leather owl keychain alongside the CuddleBox packaging.",
+    src: "/images/CuddleBox1.JPG",
+    alt: "CuddleBox product with owl keychain",
   },
   {
-    title: 'Platypus Popper Kit',
+    title: "Platypus Regular Kit",
     description:
-      'The full craft kit layout with pattern pieces, fabric, stuffing, and tools for making a plush platypus.',
-    src: '/images/CuddleBox2.png',
-    alt: 'CuddleBox Platypus Popper craft kit contents',
+      "The full craft kit layout with pattern pieces, fabric, stuffing, and leather-working tools for making a plush platypus.",
+    src: "/images/CuddleBox2.png",
+    alt: "CuddleBox Platypus Popper craft kit contents",
   },
 ]
 
@@ -45,8 +44,7 @@ function toggleCard() {
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Project</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">CuddleBox</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          A product idea focused on comfort, care, and thoughtful interaction — DIY plush craft kits
-          with tough love in every box.
+          A business centered on cactus-based leather goods and teaching crafting skills
         </p>
       </div>
 
@@ -55,8 +53,7 @@ function toggleCard() {
           <p class="text-sm font-bold uppercase tracking-[0.3em] text-orange-600">CuddleBox</p>
           <h2 class="mt-3 text-3xl font-black tracking-tight">Business Card</h2>
           <p class="mt-4 max-w-2xl text-sm leading-6 text-orange-700">
-            A 3D business card with rounded corners. Click the card to flip between the brand front
-            and contact back.
+            Our 3D business card with the signature rounded corners.
           </p>
           <p class="mt-3 text-xs font-semibold uppercase tracking-widest text-stone-500">
             Click to flip

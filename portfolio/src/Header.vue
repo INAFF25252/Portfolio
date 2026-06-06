@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const navItems = [
-  { label: 'Home', to: '/' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'About', to: '/about' },
+  { label: "Home", to: "/" },
+  { label: "Projects", to: "/projects" },
+  { label: "About", to: "/about" },
 ]
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue"
 
 type MediaImage = {
   src: string
@@ -41,79 +41,74 @@ function currentCarouselImage(item: MediaItem) {
 function mediaCaption(item: MediaItem) {
   if (item.images?.length) {
     const current = currentCarouselImage(item)
-    return current?.description || item.description || ''
+    return current?.description || item.description || ""
   }
-  return item.description || ''
+  return item.description || ""
 }
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'Ensemble Portrait',
+    title: "Ensemble Group Pic",
     description:
-      'Flute, saxophone, and violin performers together on stage at a Young Musicians/Artists of Staten Island event.',
+      "Flute, saxophone, and violin performers together for the annual WWII memorial in Staten Island.",
     images: [
       {
-        src: '/images/Music.JPG',
-        alt: 'Three musicians with flute, saxophone, and violin on stage',
+        src: "/images/Music.JPG",
+        alt: "Three musicians with flute, saxophone, and violin on stage.",
         description:
-          'Flute, saxophone, and violin performers together on stage at a Young Musicians/Artists of Staten Island event.',
+          "Flute, saxophone, and violin (Me!) performers together for the annual WWII memorial in Staten Island.",
       },
       {
-        src: '/images/Music6.JPG',
-        alt: 'Musicians on stage after a recital',
-        description: 'Performers gathered on stage after a recital.',
+        src: "/images/Music6.JPG",
+        alt: "Musicians on stage after a recital",
+        description: "Flute, saxophone, and violin performers together with Eileen Bardell.",
       },
     ],
   },
   {
-    title: 'Holiday Mall Performance',
+    title: "Holiday Mall Performance",
     description:
-      'A festive ensemble performance featuring saxophone, violin, and oboe at a Staten Island mall.',
-    image: '/images/Mall.JPG',
-    alt: 'Holiday mall performance with saxophone, violin, and oboe',
+      "A festive ensemble performance featuring saxophone, violin, and oboe at a mall.",
+    image: "/images/Mall.JPG",
+    alt: "Holiday mall performance with saxophone, violin, and oboe",
   },
   {
-    title: 'Program Gathering',
-    description: 'Members of the Young Musicians/Artists of Staten Island program.',
-    image: '/images/Music2.JPG',
-    alt: 'Young Musicians program group photo',
+    title: "Memory Ward Mural 2024",
+    description:
+      "Members of the Young Musicians/Artists of Staten Island program painting a mural for seniors at the Clove Lakes Senior Center over the Summer.",
+    image: "/images/Music2.JPG",
+    alt: "Young Musicians program group photo",
   },
   {
-    title: 'Showcase Performance',
+    title: "Showcase Performance",
     description:
-      'Musicians presenting alongside visual artwork and solo violin performance at community events.',
+      "Musicians presenting alongside visual artwork and solo violin performance at Clove Lakes Senior Center.",
     images: [
       {
-        src: '/images/Music3.JPG',
-        alt: 'Musicians with artwork at a showcase',
+        src: "/images/Music3.JPG",
+        alt: "Musicians with artwork at a showcase",
         description:
-          'Musicians presenting alongside visual artwork at a community showcase.',
+          "Musicians presenting alongside visual artwork and solo violin performance at Clove Lakes Senior Center.",
       },
       {
-        src: '/images/Music4.JPG',
-        alt: 'Violin solo performance at a gallery',
-        description: 'A focused violin performance at a gallery event.',
+        src: "/images/Music4.JPG",
+        alt: "Violin solo performance at a gallery",
+        description: "My violin solo.",
       },
     ],
   },
   {
-    title: 'Holiday Concert',
-    description: 'A full ensemble holiday performance with saxophone, violin, and woodwinds.',
-    image: '/images/Music5.JPG',
-    alt: 'Holiday ensemble concert performance',
-  },
-  {
-    title: 'Press Feature',
+    title: "Press Feature",
     description:
-      'Coverage of a Young Musicians/Artists of Staten Island holiday performance at a Staten Island senior center.',
-    image: '/images/Music7.JPG',
-    alt: 'Newspaper feature on young musicians performance',
+      "Coverage of a Young Musicians/Artists of Staten Island holiday performance at Clove Lakes senior center.",
+    image: "/images/Music7.JPG",
+    alt: "Newspaper feature on young musicians performance",
   },
   {
-    title: 'Senior Center Performance',
-    description: 'A holiday ensemble performance for residents at a senior living community.',
-    image: '/images/Music8.JPG',
-    alt: 'Musicians performing at a senior center',
+    title: "Senior Center Performance",
+    description: "A holiday ensemble performance for seniors.",
+    image: "/images/Music8.JPG",
+    alt: "Musicians performing at a senior center",
   },
 ]
 </script>
@@ -127,7 +122,7 @@ const mediaItems: MediaItem[] = [
           Young Musicians/Artists of Staten Island
         </h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          Performances and music-centered activities connected to creative practice.
+          Performances and music-centered activities connected to service
         </p>
       </div>
 

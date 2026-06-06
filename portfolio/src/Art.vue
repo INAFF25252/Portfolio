@@ -1,65 +1,65 @@
 <script setup lang="ts">
 const artProjects = [
   {
-    title: 'Portfolio',
-    description: 'Selected drawings, paintings, and visual art pieces.',
-    image: '/images/Art1.JPG',
-    alt: 'Visual artwork preview',
-    to: '/art/portfolio',
+    title: "Portfolio",
+    description: "Selected drawings, paintings, and visual art pieces.",
+    image: "/images/Art1.JPG",
+    alt: "Visual artwork preview",
+    to: "/art/portfolio",
   },
   {
-    title: 'Logo Works',
-    description: 'Logo concepts and brand marks with source images.',
-    image: '/images/Padoga.jpeg',
-    alt: 'Logo work preview',
-    to: '/art/logo',
+    title: "Logo Works",
+    description: "Logo concepts and brand marks with source images.",
+    image: "/images/Padoga.jpeg",
+    alt: "Logo work preview",
+    to: "/art/logo",
   },
   {
-    title: 'Door Painting Club',
-    description: 'Collaborative painting work and decorative art projects.',
-    image: '/images/DoorPainting7.jpg',
-    alt: 'Door painting club preview',
-    to: '/art/door-painting-club',
+    title: "Door Painting Club",
+    description: "Collaborative painting work and decorative art projects.",
+    image: "/images/DoorPainting7.jpg",
+    alt: "Door painting club preview",
+    to: "/art/door-painting-club",
   },
 ]
 
 const awards = [
   {
-    org: 'Celebrating Arts',
-    honor: 'Top 10',
-    year: '2025',
-    url: 'https://www.celebratingart.com/',
+    org: "Celebrating Arts",
+    honor: "Top 10",
+    year: "2025",
+    url: "https://www.celebratingart.com/",
   },
   {
-    org: 'Scholastic Art & Writing Awards',
-    honor: 'National Gold — Digital Art',
-    url: 'https://www.artandwriting.org/',
+    org: "Scholastic Art & Writing Awards",
+    honor: "National Gold — Digital Art",
+    url: "https://www.artandwriting.org/",
   },
   {
-    org: 'Scholastic Art & Writing Awards',
-    honor: 'Gold ×1, Silver ×4, Bronze ×2, Honorable Mention ×1',
-    year: '2024',
-    url: 'https://www.artandwriting.org/',
+    org: "Scholastic Art & Writing Awards",
+    honor: "Gold ×1, Silver ×4, Bronze ×2, Honorable Mention ×1",
+    year: "2024",
+    url: "https://www.artandwriting.org/",
   },
   {
-    org: 'Congressional Art Competition',
-    honor: 'Co-Winner',
-    url: 'https://www.house.gov/educators-and-students/congressional-art-competition',
+    org: "Congressional Art Competition",
+    honor: "Co-Winner",
+    url: "https://www.house.gov/educators-and-students/congressional-art-competition",
   },
   {
-    org: 'The School Art League',
-    honor: 'St. Gaudens Medal',
-    url: 'https://schoolartleague.org/',
+    org: "The School Art League",
+    honor: "St. Gaudens Medal",
+    url: "https://schoolartleague.org/",
   },
   {
-    org: 'Bow Seat Ocean Awareness',
-    honor: 'International Honorable Mention',
-    url: 'https://bowseat.org/',
+    org: "Bow Seat Ocean Awareness",
+    honor: "International Honorable Mention",
+    url: "https://bowseat.org/",
   },
   {
-    org: 'NYC Borough Arts Festival',
-    honor: 'First Place',
-    url: 'https://sites.google.com/schools.nyc.gov/nycdoe-oasp/borough-arts-festivals',
+    org: "NYC Borough Arts Festival",
+    honor: "First Place",
+    url: "https://sites.google.com/schools.nyc.gov/nycdoe-oasp/borough-arts-festivals",
   },
 ]
 </script>
@@ -71,7 +71,7 @@ const awards = [
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Gallery</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Art Projects</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          Explore portfolio artwork, logo design, and collaborative art projects.
+          Large scale projects, awards, and portfolio across media
         </p>
       </div>
 

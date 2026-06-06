@@ -10,20 +10,21 @@ type MediaItem = {
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'Demo Video 1',
-    description: '',
-    src: '/images/UnityVid.mov',
-    alt: 'Unity demo video 1',
-    link: 'https://inaff25252.itch.io/personal-project',
-    linkLabel: 'Personal Project on itch.io',
+    title: "That Time I Accidentally Kidnapped A Princess",
+    description:
+      "A 2D narrative-based game snippet where the player needs to create a fake key without getting caught.",
+    src: "/images/UnityVid.mov",
+    alt: "Unity demo video 1",
+    link: "https://inaff25252.itch.io/personal-project",
+    linkLabel: "That Time I Accidentally Kidnapped A Princess on Itch.io",
   },
   {
-    title: 'Demo Video 2',
-    description: '',
-    src: '/images/UnityVid2.mov',
-    alt: 'Unity demo video 2',
-    link: 'https://inaff25252.itch.io/spaced-out',
-    linkLabel: 'Spaced Out on itch.io',
+    title: "Spaced Out",
+    description: "A rhythm game made with pixel art.",
+    src: "/images/UnityVid2.mov",
+    alt: "Unity demo video 2",
+    link: "https://inaff25252.itch.io/spaced-out",
+    linkLabel: "Spaced Out on Itch.io",
   },
 ]
 </script>
@@ -33,10 +34,18 @@ const mediaItems: MediaItem[] = [
     <div class="mx-auto max-w-6xl">
       <div class="mx-auto max-w-3xl text-center">
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Project</p>
-        <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Unity Work</h1>
+        <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Game Design</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          Interactive experiments and real-time experiences built in Unity.
+          Personal projects and group projects built in Unity and Unreal
         </p>
+        <a
+          href="https://github.com/INAFF25252"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-block text-sm font-bold uppercase tracking-widest text-orange-600 transition hover:text-orange-800"
+        >
+          GitHub
+        </a>
       </div>
 
       <div class="mt-14 space-y-16">
@@ -54,6 +63,15 @@ const mediaItems: MediaItem[] = [
             >
               {{ item.description }}
             </p>
+            <a
+              v-if="item.link"
+              :href="item.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-4 inline-block text-sm font-bold uppercase tracking-widest text-orange-600 transition hover:text-orange-800"
+            >
+              {{ item.linkLabel ?? "Play on itch.io" }}
+            </a>
           </div>
 
           <figure class="w-full lg:justify-self-end">
@@ -65,15 +83,6 @@ const mediaItems: MediaItem[] = [
             >
               Your browser does not support the video tag.
             </video>
-            <a
-              v-if="item.link"
-              :href="item.link"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mt-3 block text-center text-sm font-bold uppercase tracking-widest text-orange-600 transition hover:text-orange-800"
-            >
-              {{ item.linkLabel ?? 'Play on itch.io' }}
-            </a>
           </figure>
         </article>
       </div>

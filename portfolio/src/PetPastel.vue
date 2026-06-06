@@ -2,72 +2,73 @@
 type MediaItem = {
   title: string
   description: string
-  type: 'image' | 'video'
+  type: "image" | "video"
   src: string
   alt: string
 }
 
 const pressLinks = [
   {
-    label: 'SILive Gallery',
-    url: 'https://www.silive.com/galleries/RVARCU3EXNA6JCNYGHHJ6WHGG4/',
+    label: "SILive Gallery",
+    url: "https://www.silive.com/galleries/RVARCU3EXNA6JCNYGHHJ6WHGG4/",
   },
   {
-    label: 'peta2 — Art Show for Animal Shelters',
-    url: 'https://www.peta2.com/culture/art-show-animal-shelters/',
+    label: "peta2 — Art Show for Animal Shelters",
+    url: "https://www.peta2.com/culture/art-show-animal-shelters/",
   },
 ]
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'Brand Concept',
+    title: "2025 Gallery",
     description:
-      'A creative brand concept with playful visuals and pet-focused illustration.',
-    type: 'image',
-    src: '/images/PetPastel.jpeg',
-    alt: 'Pet Pastel brand concept preview',
+      "Second annual charity gallery where we raised $2,300 for the ACC of NYC.",
+    type: "image",
+    src: "/images/PetPastel.jpeg",
+    alt: "Pet Pastel brand concept preview",
   },
   {
-    title: 'Illustration 1',
-    description: '',
-    type: 'image',
-    src: '/images/PetPastel1.JPG',
-    alt: 'Pet Pastel illustration 1',
+    title: "2024 Gallery Poster",
+    description: "The poster for our first gallery.",
+    type: "image",
+    src: "/images/PetPastel1.JPG",
+    alt: "Pet Pastel illustration 1",
   },
   {
-    title: 'Illustration 2',
-    description: '',
-    type: 'image',
-    src: '/images/PetPastel2.JPG',
-    alt: 'Pet Pastel illustration 2',
+    title: "2024 Gallery",
+    description: "A small snippet of our 2024 gallery.",
+    type: "image",
+    src: "/images/PetPastel2.JPG",
+    alt: "Pet Pastel illustration 2",
   },
   {
-    title: 'Volunteer Event',
-    description: 'Pet Pastel volunteers at a community animal care event.',
-    type: 'image',
-    src: '/images/PetPastel3.JPG',
-    alt: 'Pet Pastel volunteer group photo',
+    title: "2024 Gallery ACC Group Pic",
+    description:
+      "Pet Pastel, ACC volunteers, and Clove Lakes Senior Center Officials at the 2024 gallery.",
+    type: "image",
+    src: "/images/PetPastel3.JPG",
+    alt: "Pet Pastel volunteer group photo",
   },
   {
-    title: 'Process Video',
-    description: '',
-    type: 'video',
-    src: '/images/PetPastelVid1.MP4',
-    alt: 'Pet Pastel process video',
+    title: "2025 Gallery Video",
+    description: "A video showing the events of the 2025 Gallery.",
+    type: "video",
+    src: "/images/PetPastelVid1.MP4",
+    alt: "Pet Pastel process video",
   },
   {
-    title: 'Illustration 3',
-    description: '',
-    type: 'image',
-    src: '/images/PetPastel6.JPG',
-    alt: 'Pet Pastel cat portrait',
+    title: "Example of Commision",
+    description: "",
+    type: "image",
+    src: "/images/PetPastel6.JPG",
+    alt: "Pet Pastel cat portrait",
   },
   {
-    title: 'Illustration 4',
-    description: '',
-    type: 'image',
-    src: '/images/PetPastel7.JPG',
-    alt: 'Pet Pastel dog portrait',
+    title: "Example of Commision 2",
+    description: "",
+    type: "image",
+    src: "/images/PetPastel7.JPG",
+    alt: "Pet Pastel dog portrait",
   },
 ]
 </script>
@@ -79,7 +80,8 @@ const mediaItems: MediaItem[] = [
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Project</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Pet Pastel</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          A playful pet-focused brand with illustrations and process documentation.
+          A nonprofit 501(c)(3) dedicated to local animal shelters through animal galleries and
+          commisions
         </p>
         <div class="mt-4 flex flex-col items-center gap-2">
           <a
@@ -122,7 +124,7 @@ const mediaItems: MediaItem[] = [
 
           <figure class="w-full lg:justify-self-end">
             <img
-              v-if="item.type === 'image'"
+              v-if='item.type === "image"'
               :src="item.src"
               :alt="item.alt"
               class="ml-auto max-h-[34rem] w-full object-contain"

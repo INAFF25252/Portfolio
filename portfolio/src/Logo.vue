@@ -49,7 +49,7 @@ const logos: Logo[] = [
   },
   {
     title: "Senior Shirt",
-    description: "My design was chosen by SiTech's graduating class of 2026",
+    description: "My design was chosen by SiTech's graduating class of 2026.",
     image: "/images/Logo.PNG",
   },
   {
@@ -76,7 +76,7 @@ const logos: Logo[] = [
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Art</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Logo Works</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          A collection of logo-focused pieces and brand marks with left-side captions.
+          A collection of logos and designs I made
         </p>
       </div>
 

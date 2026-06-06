@@ -192,7 +192,7 @@ const artworks: Artwork[] = [
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Gallery</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Art Projects</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          Selected portfolio artwork shown with image captions on the left.
+          Selected portfolio artwork
         </p>
       </div>
 
