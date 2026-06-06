@@ -5,7 +5,7 @@
     <div class="mx-auto max-w-6xl">
       <div class="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">About</p>
+          <p class="text-sm font-semibold tracking-[0.35em] text-orange-600 uppercase">About</p>
           <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">
             Chen Xi He
           </h1>
@@ -13,6 +13,38 @@
             Hi, I'm Chen Xi, an incoming freshman at Princeton University. I'm interested in the
             arts, from music and visual work to 3D.
           </p>
+          <div class="mt-6 flex flex-col gap-2">
+            <a
+              href="https://www.linkedin.com/in/chen-xi-he-7bbbb9347"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-bold tracking-widest text-orange-600 transition hover:text-orange-800"
+            >
+              <span class="uppercase">LinkedIn</span>
+              <span class="font-normal text-stone-500"> · </span>
+              @chen-xi-he
+            </a>
+            <a
+              href="https://www.instagram.com/inaff.25252/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-bold tracking-widest text-orange-600 transition hover:text-orange-800"
+            >
+              <span class="uppercase">Instagram</span>
+              <span class="font-normal text-stone-500"> · </span>
+              @inaff.25252
+            </a>
+            <a
+              href="https://github.com/INAFF25252"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-bold tracking-widest text-orange-600 transition hover:text-orange-800"
+            >
+              <span class="uppercase">GitHub</span>
+              <span class="font-normal text-stone-500"> · </span>
+              @INAFF25252
+            </a>
+          </div>
         </div>
 
         <figure class="relative">
@@ -30,5 +62,3 @@
     </div>
   </section>
 </template>
-
-<style scoped></style>

@@ -1,47 +1,47 @@
 <script setup lang="ts">
 const projects = [
   {
-    title: "Blender Work",
-    description: "3D models and renders built in Blender.",
-    image: "/images/Padoga.jpeg",
-    alt: "Blender project model",
-    to: "/cad",
+    title: 'Blender Work',
+    description: '3D models and renders built in Blender.',
+    image: '/images/Padoga.jpeg',
+    alt: 'Blender project model',
+    to: '/cad',
   },
   {
-    title: "Game Design",
-    description: "Personal projects and group projects built in Unity and Unreal.",
-    image: "/images/Unity.png",
-    alt: "Unity project screenshot",
-    to: "/unity",
+    title: 'Game Design',
+    description: 'Personal projects and group projects built in Unity and Unreal.',
+    image: '/images/Unity.png',
+    alt: 'Unity project screenshot',
+    to: '/unity',
   },
   {
-    title: "Pet Pastel",
+    title: 'Pet Pastel',
     description:
-      "A nonprofit 501(c)(3) dedicated to local animal shelters through animal galleries and commisions.",
-    image: "/images/PetPastel.jpeg",
-    alt: "Pet Pastel artwork",
-    to: "/pet-pastel",
+      'A nonprofit 501(c)(3) dedicated to local animal shelters through animal galleries and commisions.',
+    image: '/images/PetPastel.jpeg',
+    alt: 'Pet Pastel artwork',
+    to: '/pet-pastel',
   },
   {
-    title: "Art Works",
-    description: "Large scale projects, awards, and portfolio across media.",
-    image: "/images/Art1.JPG",
-    alt: "Artwork portfolio preview",
-    to: "/art",
+    title: 'Art Works',
+    description: 'Large scale projects, awards, and portfolio across media.',
+    image: '/images/Art1.JPG',
+    alt: 'Artwork portfolio preview',
+    to: '/art',
   },
   {
-    title: "Music Activities",
-    description: "Performances and music-centered activities connected to service.",
-    image: "/images/Mall.JPG",
-    alt: "Music activity photo",
-    to: "/music",
+    title: 'Music Activities',
+    description: 'Performances and music-centered activities connected to service.',
+    image: '/images/Mall.JPG',
+    alt: 'Music activity photo',
+    to: '/music',
   },
   {
-    title: "CuddleBox",
-    description: "A business centered on cactus-based leather goods and teaching crafting skills.",
-    image: "/images/CuddleBox.PNG",
-    alt: "CuddleBox project preview",
-    to: "/cuddle-box",
+    title: 'CuddleBox',
+    description: 'A business centered on cactus-based leather goods and teaching crafting skills.',
+    image: '/images/CuddleBox.PNG',
+    alt: 'CuddleBox project preview',
+    to: '/cuddle-box',
   },
 ]
 </script>
@@ -68,7 +68,7 @@ const projects = [
             <h2 class="text-2xl font-black text-[#221e22]">{{ project.title }}</h2>
             <p class="mt-3 text-sm leading-6 text-stone-600">{{ project.description }}</p>
             <span
-              class="mt-5 inline-flex text-sm font-bold uppercase tracking-widest text-orange-600 group-hover:text-orange-800"
+              class="mt-5 inline-flex text-sm font-bold tracking-widest text-orange-600 uppercase group-hover:text-orange-800"
             >
               View project
             </span>
@@ -78,5 +78,3 @@ const projects = [
     </div>
   </section>
 </template>
-
-<style scoped></style>
