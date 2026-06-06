@@ -12,7 +12,7 @@ const mediaItems: MediaItem[] = [
   {
     title: 'That Time I Accidentally Kidnapped A Princess',
     description:
-      'A 2D narrative-based game snippet where the player needs to create a fake key without getting caught.',
+      'A 2D narrative-based game snippet where the player needs to create a fake key without getting caught. Narrative game design is super fun, I still need to set up the power/ability system that will allow players to play though. This portion is inspired by the game Escapist.',
     src: '/images/UnityVid.mov',
     alt: 'Unity demo video 1',
     link: 'https://inaff25252.itch.io/personal-project',
@@ -20,7 +20,7 @@ const mediaItems: MediaItem[] = [
   },
   {
     title: 'Spaced Out',
-    description: 'A rhythm game made with pixel art.',
+    description: 'A rhythm game made with pixel art. Team Project at Urban Arts Game Academy. Rhythm games are super difficult and time consuming. The timing changes when uploaded to different sites so the itch-uploaded one is slightly off in timing.',
     src: '/images/UnityVid2.mov',
     alt: 'Unity demo video 2',
     link: 'https://inaff25252.itch.io/spaced-out',

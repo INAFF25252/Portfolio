@@ -2,41 +2,41 @@
 type MediaItem = {
   title: string
   description: string
-  type: 'image' | 'video'
+  type: "image" | "video"
   src: string
   alt: string
 }
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'Pagoda',
+    title: "Pagoda",
     description:
-      'A 3D architectural study of a traditional East Asian pavilion with stone bridges and reflective water.',
-    type: 'image',
-    src: '/images/Padoga.jpeg',
-    alt: 'Blender render of a pagoda pavilion over water',
+      "A 3D architectural study of a traditional East Asian pavilion with stone bridges and reflective water. The lighting was super difficult, and I want to make a better render environment next time. The roof shingles are also slightly warped, I hope to learn how to array and manipulate them better.",
+    type: "image",
+    src: "/images/Padoga.jpeg",
+    alt: "Blender render of a pagoda pavilion over water",
   },
   {
-    title: 'Character Model Study',
+    title: "Character Model Study",
     description:
-      'A low-poly character (TADC) model sculpted and posed in Blender, exploring form and stylized proportions. Gifted for my little sister.',
-    type: 'image',
-    src: '/images/CAD.jpeg',
-    alt: 'Blender viewport of a stylized character model',
+      "A low-poly character (TADC) model sculpted and posed in Blender, exploring form and stylized proportions. Gifted for my little sister. This project was a quick and simple one, I printed it out as a figure. I wanted the face features to be carved into the face, not jutting out. However it didn't work so they had to be a thickness out.",
+    type: "image",
+    src: "/images/CAD.jpeg",
+    alt: "Blender viewport of a stylized character model",
   },
   {
-    title: 'Mumei',
-    description: 'A polished chibi-style character (Mumei) render with materials.',
-    type: 'image',
-    src: '/images/CAD1.PNG',
-    alt: 'Blender character render in a marble room',
+    title: "Mumei",
+    description: "A polished chibi-style character (Mumei) render with materials. One of my first 3D models, the topology is terrible and I have since improved on it.",
+    type: "image",
+    src: "/images/CAD1.PNG",
+    alt: "Blender character render in a marble room",
   },
   {
-    title: 'Blender Donut',
-    description: 'Classic Blender Donut.',
-    type: 'video',
-    src: '/images/CadVid.MP4',
-    alt: 'Blender demo video',
+    title: "Blender Donut",
+    description: "Classic Blender Donut. My first Blender project, I referenced the donut tutorial like everyone else lol.",
+    type: "video",
+    src: "/images/CadVid.MP4",
+    alt: "Blender demo video",
   },
 ]
 </script>
