@@ -4,6 +4,8 @@ type MediaItem = {
   description: string
   src: string
   alt: string
+  link?: string
+  linkLabel?: string
 }
 
 const mediaItems: MediaItem[] = [
@@ -12,12 +14,16 @@ const mediaItems: MediaItem[] = [
     description: '',
     src: '/images/UnityVid.mov',
     alt: 'Unity demo video 1',
+    link: 'https://inaff25252.itch.io/personal-project',
+    linkLabel: 'Personal Project on itch.io',
   },
   {
     title: 'Demo Video 2',
     description: '',
     src: '/images/UnityVid2.mov',
     alt: 'Unity demo video 2',
+    link: 'https://inaff25252.itch.io/spaced-out',
+    linkLabel: 'Spaced Out on itch.io',
   },
 ]
 </script>
@@ -59,6 +65,15 @@ const mediaItems: MediaItem[] = [
             >
               Your browser does not support the video tag.
             </video>
+            <a
+              v-if="item.link"
+              :href="item.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-3 block text-center text-sm font-bold uppercase tracking-widest text-orange-600 transition hover:text-orange-800"
+            >
+              {{ item.linkLabel ?? 'Play on itch.io' }}
+            </a>
           </figure>
         </article>
       </div>

@@ -1,41 +1,70 @@
 <script setup lang="ts">
-const logos = [
+import { ref } from "vue"
+
+type LogoImage = {
+  src: string
+  alt: string
+}
+
+type Logo = {
+  title: string
+  description: string
+  image?: string
+  images?: LogoImage[]
+}
+
+const carouselIndices = ref<Record<string, number>>({})
+
+function getCarouselIndex(key: string) {
+  return carouselIndices.value[key] ?? 0
+}
+
+function showPrevImage(key: string, total: number) {
+  carouselIndices.value[key] = (getCarouselIndex(key) - 1 + total) % total
+}
+
+function showNextImage(key: string, total: number) {
+  carouselIndices.value[key] = (getCarouselIndex(key) + 1) % total
+}
+
+function logoKey(logo: Logo) {
+  return logo.images?.[0]?.src ?? logo.image ?? logo.title
+}
+
+function currentCarouselImage(logo: Logo) {
+  if (!logo.images?.length) return null
+  return logo.images[getCarouselIndex(logoKey(logo))]!
+}
+
+const logos: Logo[] = [
   {
-    title: 'Logo 1',
-    description: 'A polished logo concept from the current brand image set.',
-    image: '/images/Logo1.PNG',
-    source: '/images/Logo1.PNG',
+    title: "Dough Boys",
+    description: "A commision to create a logo in the style of the Play-doh style for a business.",
+    image: "/images/Logo1.PNG",
   },
   {
-    title: 'Logo 2',
-    description: 'A second logo direction with a distinct visual treatment.',
-    image: '/images/Logo2.PNG',
-    source: '/images/Logo2.PNG',
+    title: "Pet Pastel",
+    description: "I made the logo for my nonprofit.",
+    image: "/images/Logo2.PNG",
   },
   {
-    title: 'Logo 3',
-    description: 'A larger rendered logo image for the gallery collection.',
-    image: '/images/Logo.PNG',
-    source: '/images/Logo.PNG',
+    title: "Senior Shirt",
+    description: "My design was chosen by SiTech's graduating class of 2026",
+    image: "/images/Logo.PNG",
   },
   {
-    title: 'Logo 4',
-    description: 'An alternate mark for comparing logo styles and sources.',
-    image: '/images/Logo4.PNG',
-    source: '/images/Logo4.PNG',
+    title: "Debate Team Logo",
+    description: "I was requested to make a front and back design for the Debate Team crewneck.",
+    images: [
+      { src: "/images/Logo4.PNG", alt: "Debate Team Logo" },
+      { src: "/images/Logo5.PNG", alt: "Debate Team Logo alternate" },
+    ],
   },
   {
-    title: 'Logo 5',
-    description: 'A final logo piece completing the right-side source gallery.',
-    image: '/images/Logo5.PNG',
-    source: '/images/Logo5.PNG',
-  },
-  {
-    title: 'CuddleBox',
+    title: "CuddleBox",
     description:
-      'The CuddleBox mascot and wordmark — a DIY plush craft kit brand with a playful, handmade identity.',
-    image: '/images/CuddleBox.PNG',
-    source: '/images/CuddleBox.PNG',
+      "I made this logo for my business which sells cactus-based leather plushies.",
+    image: "/images/CuddleBox.PNG",
   },
 ]
 </script>
@@ -54,7 +83,7 @@ const logos = [
       <div class="mt-14 space-y-14">
         <article
           v-for="logo in logos"
-          :key="logo.title"
+          :key="logoKey(logo)"
           class="grid gap-6 lg:grid-cols-[0.7fr_1fr] lg:items-start"
         >
           <div class="lg:pt-8">
@@ -62,16 +91,47 @@ const logos = [
             <h2 class="mt-3 text-3xl font-black tracking-tight">{{ logo.title }}</h2>
             <p class="mt-4 max-w-2xl text-sm leading-6 text-orange-700">
               {{ logo.description }}
-              <span
-                class="mt-2 block break-all text-xs font-semibold uppercase tracking-widest text-stone-500"
-              >
-                Source: {{ logo.source }}
-              </span>
             </p>
           </div>
 
           <figure class="w-full lg:justify-self-end">
+            <div
+              v-if="logo.images"
+              class="relative ml-auto flex w-full items-center justify-center gap-3"
+            >
+              <button
+                type="button"
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#221e22] text-orange-50 shadow-lg transition hover:bg-orange-600"
+                aria-label="Previous image"
+                @click="showPrevImage(logoKey(logo), logo.images.length)"
+              >
+                ←
+              </button>
+
+              <div class="min-w-0 flex-1">
+                <img
+                  v-if="currentCarouselImage(logo)"
+                  :src="currentCarouselImage(logo)!.src"
+                  :alt="currentCarouselImage(logo)!.alt"
+                  class="mx-auto max-h-[28rem] w-full object-contain"
+                />
+                <p class="mt-3 text-center text-xs font-semibold uppercase tracking-widest text-stone-500">
+                  {{ getCarouselIndex(logoKey(logo)) + 1 }} / {{ logo.images.length }}
+                </p>
+              </div>
+
+              <button
+                type="button"
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#221e22] text-orange-50 shadow-lg transition hover:bg-orange-600"
+                aria-label="Next image"
+                @click="showNextImage(logoKey(logo), logo.images.length)"
+              >
+                →
+              </button>
+            </div>
+
             <img
+              v-else
               :src="logo.image"
               :alt="logo.title"
               class="ml-auto max-h-[28rem] w-full object-contain"

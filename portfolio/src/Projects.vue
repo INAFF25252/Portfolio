@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const projects = [
   {
-    title: 'CAD Work',
-    description: 'Rendered models and design studies exploring form, balance, and presentation.',
+    title: 'Blender Work',
+    description: '3D models and renders built in Blender.',
     image: '/images/Padoga.jpeg',
-    alt: 'CAD project model',
+    alt: 'Blender project model',
     to: '/cad',
   },
   {

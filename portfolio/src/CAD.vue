@@ -9,35 +9,35 @@ type MediaItem = {
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'Pagoda Pavilion',
+    title: 'Pagoda',
     description:
       'A 3D architectural study of a traditional East Asian pavilion with stone bridges and reflective water.',
     type: 'image',
     src: '/images/Padoga.jpeg',
-    alt: 'CAD render of a pagoda pavilion over water',
+    alt: 'Blender render of a pagoda pavilion over water',
   },
   {
     title: 'Character Model Study',
     description:
-      'A low-poly character model sculpted and posed in Blender, exploring form and stylized proportions.',
+      'A low-poly character (TADC) model sculpted and posed in Blender, exploring form and stylized proportions. Gifted for my little sister.',
     type: 'image',
     src: '/images/CAD.jpeg',
     alt: 'Blender viewport of a stylized character model',
   },
   {
-    title: 'Character Render',
+    title: 'Mumei',
     description:
-      'A polished chibi-style character render with materials, lighting, and environment design.',
+      'A polished chibi-style character (Mumei) render with materials.',
     type: 'image',
     src: '/images/CAD1.PNG',
-    alt: 'CAD character render in a marble room',
+    alt: 'Blender character render in a marble room',
   },
   {
-    title: 'CAD Demo Video',
-    description: 'A walkthrough of CAD modeling and rendering work.',
+    title: 'Blender Donut',
+    description: 'Classic Blender Donut.',
     type: 'video',
     src: '/images/CadVid.MP4',
-    alt: 'CAD demo video',
+    alt: 'Blender demo video',
   },
 ]
 </script>
@@ -47,9 +47,9 @@ const mediaItems: MediaItem[] = [
     <div class="mx-auto max-w-6xl">
       <div class="mx-auto max-w-3xl text-center">
         <p class="text-sm font-semibold uppercase tracking-[0.35em] text-orange-600">Project</p>
-        <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">CAD Works</h1>
+        <h1 class="mt-3 text-4xl font-black tracking-tight sm:text-5xl">Blender Works</h1>
         <p class="mt-4 text-lg leading-8 text-stone-700">
-          Rendered models and design studies exploring form, balance, and presentation.
+          3D models and renders built in Blender, exploring form, balance, and presentation.
         </p>
       </div>
 
@@ -60,7 +60,7 @@ const mediaItems: MediaItem[] = [
           class="grid gap-6 lg:grid-cols-[0.7fr_1fr] lg:items-start"
         >
           <div class="lg:pt-8">
-            <p class="text-sm font-bold uppercase tracking-[0.3em] text-orange-600">CAD</p>
+            <p class="text-sm font-bold uppercase tracking-[0.3em] text-orange-600">Blender</p>
             <h2 class="mt-3 text-3xl font-black tracking-tight">{{ item.title }}</h2>
             <p class="mt-4 max-w-2xl text-sm leading-6 text-orange-700">
               {{ item.description }}
