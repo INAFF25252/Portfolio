@@ -16,6 +16,23 @@ type BlogPost = {
   code?: string
 }
 
+type ProjectLink = {
+  label: string
+  href: string
+  external?: boolean
+}
+
+type ProjectWriteup = {
+  title: string
+  image: string
+  alt: string
+  caption: string
+  problem: string
+  approach: string[]
+  reflection: string
+  links: ProjectLink[]
+}
+
 const posts: BlogPost[] = [
   {
     slug: 'routing-finally-clicked',
@@ -111,6 +128,101 @@ const router = createRouter({
 ]
 
 const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date))
+
+const projectWriteups: ProjectWriteup[] = [
+  {
+    title: 'Portfolio & Visual Art Archive',
+    image: '/images/Art1.JPG',
+    alt: 'Portfolio artwork preview from Train of Thought',
+    caption:
+      'A large-scale visual portfolio across graphite, watercolor, acrylic, oil, mixed media, and digital art.',
+    problem:
+      'The problem was organizing years of artwork into something readable for admissions reviewers, recruiters, teachers, and gallery visitors. Instead of a loose image dump, the portfolio needed context: why each piece exists, what medium was used, and what visual decisions shaped it.',
+    approach: [
+      'Built as a Vue route backed by a typed artwork array, so each piece keeps its title, dimensions, medium, image path, alt text, and caption together.',
+      'Used Tailwind utility classes for responsive two-column layouts that keep written context beside the artwork on desktop and stack cleanly on mobile.',
+      'Added a lightweight carousel pattern for pieces with process images so viewers can compare sketches and final work without leaving the page.',
+    ],
+    reflection:
+      'The hardest part was editing down the writing. I learned that technical presentation is not only code; it is also information architecture, accessibility text, and deciding what a viewer needs first.',
+    links: [{ label: 'View portfolio gallery', href: '/art/portfolio' }],
+  },
+  {
+    title: 'Game Design: Princess + Spaced Out',
+    image: '/images/Unity.png',
+    alt: 'Unity game project preview',
+    caption:
+      'That Time I Accidentally Kidnapped A Princess is a narrative prototype; Spaced Out is a rhythm game made as a team project at Urban Arts Game Academy.',
+    problem:
+      'These games explored how to make short interactive experiences understandable to players quickly. The Princess prototype focused on a stealth/narrative problem where a player creates a fake key without getting caught, while Spaced Out tested rhythm timing and team production.',
+    approach: [
+      'Used Unity for fast 2D iteration, scene management, player interaction, and exported WebGL builds for itch.io demos.',
+      'Scoped each game around one core mechanic first: narrative stealth and key creation for Princess, rhythm input timing and pixel-art feedback for Spaced Out.',
+      'Published playable builds on itch.io so testers could access the games without installing a local project.',
+    ],
+    reflection:
+      'Rhythm games were harder than expected because timing changed after upload. That taught me to test in the same environment players use and to build calibration or timing buffers earlier.',
+    links: [
+      {
+        label: 'Play Princess prototype',
+        href: 'https://inaff25252.itch.io/personal-project',
+        external: true,
+      },
+      {
+        label: 'Play Spaced Out',
+        href: 'https://inaff25252.itch.io/spaced-out',
+        external: true,
+      },
+      { label: 'Game project page', href: '/unity' },
+    ],
+  },
+  {
+    title: 'CuddleBox',
+    image: '/images/CuddleBox.PNG',
+    alt: 'CuddleBox brand logo and project preview',
+    caption:
+      'CuddleBox presents cactus-based leather plush craft kits, packaging, product photos, and a flippable 3D business card.',
+    problem:
+      'CuddleBox was made for people who like handmade goods but may feel intimidated by leatherworking. The goal was to turn a material experiment into a friendly product system with clear packaging, approachable branding, and beginner-ready kits.',
+    approach: [
+      'Combined physical prototyping with digital presentation: kit layouts, product photography, brand logo work, and a Vue page that documents the product line.',
+      'Used CSS 3D transforms for an interactive business card so the portfolio demonstrates both the front/back design and the interaction in one component.',
+      'Kept the project page media-driven because buyers and makers need to see materials, patterns, tools, and final plush examples before understanding the concept.',
+    ],
+    reflection:
+      'The biggest challenge was making the kit feel simple without hiding the craft. I learned that instructions, packaging, and product photos are part of the user experience.',
+    links: [{ label: 'View CuddleBox project', href: '/cuddle-box' }],
+  },
+  {
+    title: 'Pet Pastel',
+    image: '/images/PetPastel.jpeg',
+    alt: 'Pet Pastel charity gallery preview',
+    caption:
+      'Pet Pastel documents charity galleries, pet portrait commissions, press coverage, and shelter-centered fundraising.',
+    problem:
+      'Pet Pastel serves local animal shelters and pet owners by turning artwork into fundraising. The project needed to explain the mission, show proof of events, and make the organization feel trustworthy to donors, volunteers, and press.',
+    approach: [
+      'Built a dedicated Vue project page with image and video media cards so gallery posters, group photos, commissions, and event clips can be read in sequence.',
+      'Linked live public proof points including Instagram, SILive coverage, and peta2 coverage to support credibility beyond the portfolio itself.',
+      'Wrote captions around outcomes, such as raising $2,300 for the ACC of NYC, so the page communicates impact instead of only showing images.',
+    ],
+    reflection:
+      'The hardest part was coordinating art, people, promotion, and a real nonprofit goal at the same time. I learned that communication and follow-through matter as much as creative skill.',
+    links: [
+      { label: 'View Pet Pastel project', href: '/pet-pastel' },
+      {
+        label: 'Pet Pastel Instagram',
+        href: 'https://www.instagram.com/pet_pastel_/',
+        external: true,
+      },
+      {
+        label: 'SILive gallery coverage',
+        href: 'https://www.silive.com/galleries/RVARCU3EXNA6JCNYGHHJ6WHGG4/',
+        external: true,
+      },
+    ],
+  },
+]
 </script>
 
 <template>
@@ -147,6 +259,84 @@ const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date))
             </p>
             <p class="mt-4 text-sm leading-6 text-stone-600">{{ post.summary }}</p>
           </a>
+        </div>
+      </section>
+
+      <section class="mt-14">
+        <div
+          class="rounded-3xl bg-[#221e22] p-6 text-orange-50 shadow-lg shadow-orange-950/10 sm:p-8"
+        >
+          <p class="text-sm font-bold tracking-[0.3em] text-orange-300 uppercase">
+            Project writeups
+          </p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight">Major projects with captions</h2>
+          <p class="mt-4 max-w-3xl text-sm leading-6 text-orange-100">
+            These notes document the Portfolio, game projects, CuddleBox, and Pet Pastel with the
+            problem each project solves, who it serves, technical choices, links, and reflections.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-8">
+          <article
+            v-for="project in projectWriteups"
+            :key="project.title"
+            class="overflow-hidden rounded-3xl bg-white shadow-lg shadow-orange-950/10"
+          >
+            <div class="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+              <figure class="bg-stone-100">
+                <img
+                  :src="project.image"
+                  :alt="project.alt"
+                  class="h-full min-h-72 w-full object-cover"
+                />
+                <figcaption class="px-6 py-4 text-sm leading-6 text-stone-600">
+                  {{ project.caption }}
+                </figcaption>
+              </figure>
+
+              <div class="p-6 sm:p-8">
+                <h3 class="text-2xl font-black tracking-tight">{{ project.title }}</h3>
+
+                <section class="mt-5">
+                  <h4 class="text-sm font-black tracking-widest text-[#221e22] uppercase">
+                    Problem & purpose
+                  </h4>
+                  <p class="mt-2 text-sm leading-6 text-stone-700">{{ project.problem }}</p>
+                </section>
+
+                <section class="mt-5">
+                  <h4 class="text-sm font-black tracking-widest text-[#221e22] uppercase">
+                    Technical approach
+                  </h4>
+                  <ul class="mt-2 list-disc space-y-2 pl-5 text-sm leading-6 text-stone-700">
+                    <li v-for="detail in project.approach" :key="detail">{{ detail }}</li>
+                  </ul>
+                </section>
+
+                <section class="mt-5">
+                  <h4 class="text-sm font-black tracking-widest text-[#221e22] uppercase">
+                    Reflection
+                  </h4>
+                  <p class="mt-2 text-sm leading-6 text-orange-700">{{ project.reflection }}</p>
+                </section>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+                  <component
+                    :is="link.external ? 'a' : 'router-link'"
+                    v-for="link in project.links"
+                    :key="link.href"
+                    :href="link.external ? link.href : undefined"
+                    :to="link.external ? undefined : link.href"
+                    :target="link.external ? '_blank' : undefined"
+                    :rel="link.external ? 'noopener noreferrer' : undefined"
+                    class="rounded-full bg-orange-500 px-4 py-2 text-xs font-bold tracking-widest text-[#221e22] uppercase transition hover:bg-orange-300"
+                  >
+                    {{ link.label }}
+                  </component>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
