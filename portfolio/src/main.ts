@@ -15,10 +15,12 @@ import About from './About.vue'
 import Portfolio from './Portfolio.vue'
 import Logo from './Logo.vue'
 import DoorPaintingClub from './DoorPaintingClub.vue'
+import Blog from './Blog.vue'
 
 const routes = [
   { path: '/', component: Home },
   { path: '/projects', alias: '/Projects', component: Projects },
+  { path: '/blog', alias: '/Blog', component: Blog },
   { path: '/about', alias: '/About', component: About },
   { path: '/cad', alias: '/CAD', component: CAD },
   { path: '/unity', alias: '/Unity', component: Unity },
