@@ -50,13 +50,13 @@ const posts: BlogPost[] = [
         heading: "The setup",
         paragraphs: [
           "The last time I used Vue was two years ago, so this portfolio made me have to relearn a lot. I had to remember how Vue components were set up, and they related to html pages, and how to use tailwind instead of css.",
-          "All these vue components are a small part of a whole, different from a seperate html page.",
+          "All these vue components are a small part of a whole, different from a separate html page.",
         ],
       },
       {
         heading: "Why it matters",
         paragraphs: [
-          "This matters because structure is part of usability. A recruiter, teacher, or engineer should be able to easily navigate through the site. I also had to consider what an user might expect while scrolling, if they would appreciate a link at the bottom of a page instead of scrolling back up, or a interactable representation of something like a business card instead of still images.",
+          "This matters because structure is part of usability. A recruiter, teacher, or engineer should be able to easily navigate through the site. I also had to consider what a user might expect while scrolling, if they would appreciate a link at the bottom of a page instead of scrolling back up, or a interactable representation of something like a business card instead of still images.",
           "The small code sample below shows how the website navigates to different pages through routing, another thing I had to relearn.",
         ],
       },
@@ -89,7 +89,7 @@ const router = createRouter({
         heading: "Communication became part of the work",
         paragraphs: [
           "Spaced Out was a rhythm game made as a team project at Urban Arts Game Academy. The technical challenge rhythm games posed was intimidating. The team would have to get every beat in line with an on-screen tile. The game would depend on timing, feedback, and repeated playtesting. The teamwork challenge was just as important because as lead artist, the other artists had a drastically different style of art to me. So I compromised to make the characters and animation while the other worked on backgrounds.",
-          "I learned that communication is about giving updates during and after something is finished. Everyday we would all stand in a circle and name one thing we finished, one thing we needed to work on, and one thing that was a \"stretch goal\". Nobody wanted to be standing so this made our communication succint and mandatory.",
+          "I learned that communication is about giving updates during and after something is finished. Every day we would all stand in a circle and name one thing we finished, one thing we needed to work on, and one thing that was a \"stretch goal\". Nobody wanted to be standing so this made our communication succinct and mandatory.",
         ],
       },
       {
@@ -115,13 +115,13 @@ const router = createRouter({
         heading: "What I am proud of",
         paragraphs: [
           "Across the last four years, I became more confident combining creative work with technical systems. I am proud that my projects have also helped others. Pet Pastel connects art to animal shelter fundraising, CuddleBox turns product design into a teachable craft kit, and my portfolio helped me for college application.",
-          "I am also proud of learning to accept feedback, especially in art. My art used to be only realistic and very uninspired. After being forced to crank out idea after idea in a few months for a whole portfolio, my creative process and even art process expidited and flourished.",
+          "I am also proud of learning to accept feedback, especially in art. My art used to be only realistic and very uninspired. After being forced to crank out idea after idea in a few months for a whole portfolio, my creative process and even art process expedited and flourished.",
         ],
       },
       {
         heading: "What I still want to work on",
         paragraphs: [
-          "I still want to improve the engineering side of my creative projects. That means getting profficient in code, and getting comfortable with using time-efficient code.",
+          "I still want to improve the engineering side of my creative projects. That means getting proficient in code, and getting comfortable with using time-efficient code.",
           "The biggest growth area for me is how I view art. I'm much more nonchalant with my works now, the idea behind the art is more important than how accurate it is.",
         ],
       },
@@ -178,7 +178,7 @@ const projectWriteUps: ProjectWriteUp[] = [
       { label: "Game project page", href: "/unity" },
     ],
     reflection:
-      "TTIAKAP was very difficult, especially since it was a game snippet. Players often gave the feedback that they didn't understand the plot or their tasks. This would be fixed once I add in dialouge, but as a snippet it's not perfect.",
+      "TTIAKAP was very difficult, especially since it was a game snippet. Players often gave the feedback that they didn't understand the plot or their tasks. This would be fixed once I add in dialogue, but as a snippet it's not perfect.",
   },
   {
     slug: "cuddlebox",

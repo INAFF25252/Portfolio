@@ -96,9 +96,14 @@ onDeactivated(stopAutoplay)
         <h1 class="max-w-3xl text-5xl font-black tracking-tight text-white sm:text-7xl">
           Chen Xi He
         </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-orange-100">
-          A creative portfolio blending visual art, CAD, Unity experiments, music activities, and
-          product ideas into thoughtful digital and physical experiences.
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-orange-100 sm:text-xl sm:leading-9">
+          I'm Chen Xi He, an incoming freshman at Princeton University who works across visual art,
+          game design, 3D modeling, and community-focused projects. This site is built with Vue,
+          TypeScript, Tailwind CSS, and Pinia, with project work that also uses Unity, Blender, and
+          itch.io for demos. Visitors can browse my art portfolio, creative and technical projects,
+          playable games, and documented work from nonprofits and product ideas like CuddleBox and
+          Pet Pastel. The blog collects reflections on learning, teamwork, and the engineering
+          behind those projects.
         </p>
 
         <div class="mt-10 flex flex-col gap-4 sm:flex-row">

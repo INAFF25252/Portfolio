@@ -12,7 +12,7 @@ This site brings together projects from different disciplines in one place — f
 
 - **Home** — Hero section with rotating artwork gallery
 - **Projects** — Grid of featured work with links to detail pages
-- **About** — Bio, photo, and social links
+- **About** — Bio, tech stack, GitHub profile, photo, and social links
 - **Project pages**
   - Blender Work (`/cad`) — 3D models and renders
   - Game Design (`/unity`) — Unity and Unreal projects
@@ -140,6 +140,7 @@ Then open the URL shown in the terminal (usually `http://localhost:4173/`).
 | --- | --- |
 | `/` | Home |
 | `/projects` | Projects overview |
+| `/blog` | Learning journal & project write-ups |
 | `/about` | About |
 | `/cad` | Blender Work |
 | `/unity` | Game Design |
