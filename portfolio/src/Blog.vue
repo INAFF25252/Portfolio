@@ -37,27 +37,27 @@ type ProjectWriteUp = {
 
 const posts: BlogPost[] = [
   {
-    slug: 'routing-finally-clicked',
-    title: 'Growth Milestone: When Routing Finally Clicked',
-    date: '2026-06-11',
-    displayDate: 'June 11, 2026',
-    author: 'Chen Xi He',
-    topic: 'Growth Milestones',
+    slug: "routing-finally-clicked",
+    title: "Growth Milestone: When Routing Finally Clicked",
+    date: "2026-06-11",
+    displayDate: "June 11, 2026",
+    author: "Chen Xi He",
+    topic: "Growth Milestones",
     summary:
-      'A reflection on understanding how a Vue single-page app turns separate pages into connected components.',
+      "A reflection on understanding how a Vue single-page app turns separate pages into connected components.",
     sections: [
       {
-        heading: 'The moment',
+        heading: "The setup",
         paragraphs: [
-          'The concept that clicked for me was routing. At first, a website felt like a group of separate files that somehow had to be stitched together. When I worked on this portfolio, I realized that the router is the map between a URL and the component that should render for that URL.',
-          'That changed how I thought about the whole project. Projects, art, CuddleBox, Pet Pastel, and now this blog are not random pages. They are connected views inside one application, which makes the site feel consistent while still giving each section its own purpose.',
+          "The last time I used Vue was two years ago, so this portfolio made me have to relearn a lot. I had to remember how Vue components were set up, and they related to html pages, and how to use tailwind instead of css.",
+          "All these vue components are a small part of a whole, different from a seperate html page.",
         ],
       },
       {
-        heading: 'Why it matters',
+        heading: "Why it matters",
         paragraphs: [
-          'This matters because structure is part of usability. A recruiter, teacher, or engineer should be able to move through the site without guessing where content lives. Routing also made me think more technically about naming, hierarchy, and how a user enters the site from a direct link.',
-          'The small code sample below shows the idea that made the app feel understandable: each route pairs a path with the component that owns that screen.',
+          "This matters because structure is part of usability. A recruiter, teacher, or engineer should be able to easily navigate through the site. I also had to consider what an user might expect while scrolling, if they would appreciate a link at the bottom of a page instead of scrolling back up, or a interactable representation of something like a business card instead of still images.",
+          "The small code sample below shows how the website navigates to different pages through routing, another thing I had to relearn.",
         ],
       },
     ],
@@ -76,53 +76,53 @@ const router = createRouter({
 })`,
   },
   {
-    slug: 'working-in-a-team',
-    title: 'Working in a Team: What Spaced Out Taught Me',
-    date: '2026-06-10',
-    displayDate: 'June 10, 2026',
-    author: 'Chen Xi He',
-    topic: 'Working in a team',
+    slug: "working-in-a-team",
+    title: "Working in a Team: What Spaced Out Taught Me",
+    date: "2026-06-10",
+    displayDate: "June 10, 2026",
+    author: "Chen Xi He",
+    topic: "Working in a team",
     summary:
-      'A build-log reflection on communication, scope, timing bugs, and what I gained from a group game project.',
+      "A build-log reflection on communication, scope, timing bugs, and what I gained from a group game project.",
     sections: [
       {
-        heading: 'Communication became part of the work',
+        heading: "Communication became part of the work",
         paragraphs: [
-          'Spaced Out was a rhythm game made as a team project at Urban Arts Game Academy. The technical challenge was obvious: rhythm games depend on timing, feedback, and repeated playtesting. The teamwork challenge was just as important because no one person could own every part at once.',
-          'I learned that communication is not only giving updates after something is finished. It is naming what is blocked, explaining what changed, and making sure teammates understand how one decision affects their part of the game.',
+          "Spaced Out was a rhythm game made as a team project at Urban Arts Game Academy. The technical challenge rhythm games posed was intimidating. The team would have to get every beat in line with an on-screen tile. The game would depend on timing, feedback, and repeated playtesting. The teamwork challenge was just as important because as lead artist, the other artists had a drastically different style of art to me. So I compromised to make the characters and animation while the other worked on backgrounds.",
+          "I learned that communication is about giving updates during and after something is finished. Everyday we would all stand in a circle and name one thing we finished, one thing we needed to work on, and one thing that was a \"stretch goal\". Nobody wanted to be standing so this made our communication succint and mandatory.",
         ],
       },
       {
-        heading: 'The hard part',
+        heading: "The hard part",
         paragraphs: [
-          'The hardest bug was timing. The game could feel correct locally but slightly off after being uploaded. That forced us to compare the development environment with the player environment and to talk about what was actually happening instead of assuming the first version was fine.',
-          'Working in a team also made scope real. If art, music, input, and level timing all depend on each other, a small change can ripple through the project. I gained practice in compromise and handoff, which I could not have learned from a solo prototype in the same way.',
+          "The hardest bug was timing. The game could feel correct locally but slightly off after being uploaded, i.e, Itch. That forced us to compare the development environment with the player environment and to talk about what was actually happening instead of assuming the first version was fine.",
+          "Working in a team also made us view scope more critically. A few days for original art, music, game idea, and code pushed me to consider the most realistic game ideas, and length.",
         ],
       },
     ],
   },
   {
-    slug: 'capstone-reflection',
-    title: 'Capstone Reflection: Creative Engineering After Four Years',
-    date: '2026-06-09',
-    displayDate: 'June 9, 2026',
-    author: 'Chen Xi He',
-    topic: 'Capstone Reflection',
+    slug: "capstone-reflection",
+    title: "Capstone Reflection: Creative Engineering After Four Years",
+    date: "2026-06-09",
+    displayDate: "June 9, 2026",
+    author: "Chen Xi He",
+    topic: "Capstone Reflection",
     summary:
-      'A reflection on growth across art, CS, product design, service projects, and what still needs work.',
+      "A reflection on growth across art, CS, product design, service projects, and what still needs work.",
     sections: [
       {
-        heading: 'What I am proud of',
+        heading: "What I am proud of",
         paragraphs: [
-          'Across the last four years, I became more confident combining creative work with technical systems. I am proud that my projects are not only assignments. Pet Pastel connects art to animal shelter fundraising, CuddleBox turns product design into a teachable craft kit, and my portfolio turns individual artworks into a structured archive.',
-          'I am also proud of learning to accept feedback without treating it like failure. When someone could not understand a project page quickly, that was not just a design complaint. It was useful information about hierarchy, writing, and whether the page was serving the viewer.',
+          "Across the last four years, I became more confident combining creative work with technical systems. I am proud that my projects have also helped others. Pet Pastel connects art to animal shelter fundraising, CuddleBox turns product design into a teachable craft kit, and my portfolio helped me for college application.",
+          "I am also proud of learning to accept feedback, especially in art. My art used to be only realistic and very uninspired. After being forced to crank out idea after idea in a few months for a whole portfolio, my creative process and even art process expidited and flourished.",
         ],
       },
       {
-        heading: 'What I still want to work on',
+        heading: "What I still want to work on",
         paragraphs: [
-          'I still want to improve the engineering side of my creative projects. That means writing clearer READMEs, testing interactive pieces in their deployed environment, checking accessibility earlier, and making technical decisions easier for another person to follow.',
-          'The biggest growth area for me is turning experiments into maintainable systems. I want my future work in CS and engineering to keep the imagination of art projects while becoming more reliable, documented, and collaborative.',
+          "I still want to improve the engineering side of my creative projects. That means getting profficient in code, and getting comfortable with using time-efficient code.",
+          "The biggest growth area for me is how I view art. I'm much more nonchalant with my works now, the idea behind the art is more important than how accurate it is.",
         ],
       },
     ],
@@ -131,113 +131,113 @@ const router = createRouter({
 
 const projectWriteUps: ProjectWriteUp[] = [
   {
-    slug: 'portfolio-visual-art-archive',
-    title: 'Portfolio & Visual Art Archive',
-    subtitle: 'Selected drawings, paintings, and visual art pieces.',
-    image: '/images/Art1.JPG',
-    alt: 'Portfolio artwork preview from Train of Thought',
+    slug: "portfolio-visual-art-archive",
+    title: "Portfolio & Visual Art Archive",
+    subtitle: "Selected drawings, paintings, and visual art pieces.",
+    image: "/images/Art1.JPG",
+    alt: "Portfolio artwork preview from Train of Thought",
     caption:
-      'A large-scale visual portfolio across graphite, watercolor, acrylic, oil, mixed media, and digital art.',
+      "A large-scale visual portfolio across graphite, watercolor, acrylic, oil, mixed media, and digital art.",
     problem:
-      'The problem was organizing years of artwork into something readable for admissions reviewers, recruiters, teachers, and gallery visitors. Instead of a loose image dump, the portfolio needed context: why each piece exists, what medium was used, and what visual decisions shaped it.',
+      "The problem was organizing years of learning art into something readable for admissions reviewers, recruiters, teachers, and gallery visitors. Looking good wasn't the biggest factor, rather, the thought process was (this is clear when looking at the winners of art contests, all very creative even if some seem not detailed).",
     approach: [
-      'Built as a Vue route backed by a typed artwork array, so each piece keeps its title, dimensions, medium, image path, alt text, and caption together.',
-      'Used Tailwind utility classes for responsive two-column layouts that keep written context beside the artwork on desktop and stack cleanly on mobile.',
-      'Added a lightweight carousel pattern for pieces with process images so viewers can compare sketches and final work without leaving the page.',
+      "Built as a Vue route backed by a typed artwork array, so each piece keeps its title, dimensions, medium, image path, alt text, and caption together.",
+      "Used Tailwind utility classes for responsive two-column layouts that keep written context beside the artwork on desktop and stack cleanly on mobile.",
+      "Added a lightweight carousel pattern for pieces with process images so viewers can compare sketches and final work without leaving the page.",
     ],
-    links: [{ label: 'View portfolio gallery', href: '/art/portfolio' }],
+    links: [{ label: "View portfolio gallery", href: "/art/portfolio" }],
     reflection:
-      'The hardest part was editing down the writing. I learned that technical presentation is not only code; it is also information architecture, accessibility text, and deciding what a viewer needs first.',
+      "The hardest part was editing down the writing. My art needed to speak for itself, I had a lot to say for why I made each part of my art a certain way, but in the end I had to \"kill my darlings\" and keep things open-ended if I wanted the impact to be personalized to each reader.",
   },
   {
-    slug: 'game-design-princess-spaced-out',
-    title: 'Game Design: Princess + Spaced Out',
-    subtitle: 'Personal projects and group projects built in Unity and Unreal.',
-    image: '/images/Unity.png',
-    alt: 'Unity game project preview',
+    slug: "game-design-princess-spaced-out",
+    title: "Game Design: TTIAKAP + Spaced Out",
+    subtitle: "Personal projects and group projects built in Unity and Unreal.",
+    image: "/images/Unity.png",
+    alt: "Unity game project preview",
     caption:
-      'That Time I Accidentally Kidnapped A Princess is a narrative prototype; Spaced Out is a rhythm game made as a team project at Urban Arts Game Academy.',
+      "That Time I Accidentally Kidnapped A Princess is a narrative prototype; Spaced Out is a rhythm game made as a team project at Urban Arts Game Academy.",
     problem:
-      'These games explored how to make short interactive experiences understandable to players quickly. The Princess prototype focused on a stealth/narrative problem where a player creates a fake key without getting caught, while Spaced Out tested rhythm timing and team production.',
+      "These games explored how to make short interactive experiences understandable to players quickly. The Princess prototype focused on a stealth/narrative problem where a player creates a fake key without getting caught, while Spaced Out tested rhythm timing and team production.",
     approach: [
-      'Used Unity for fast 2D iteration, scene management, player interaction, and exported WebGL builds for itch.io demos.',
-      'Scoped each game around one core mechanic first: narrative stealth and key creation for Princess, rhythm input timing and pixel-art feedback for Spaced Out.',
-      'Published playable builds on itch.io so testers could access the games without installing a local project.',
+      "Used Unity for fast 2D iteration, scene management, player interaction, and exported WebGL builds for itch.io demos.",
+      "Scoped each game around one core mechanic first: narrative and item collecting, rhythm input timing and pixel-art animation for Spaced Out.",
+      "Published playable builds on itch.io so testers could access the games without installing a local project.",
     ],
     links: [
       {
-        label: 'Play Princess prototype',
-        href: 'https://inaff25252.itch.io/personal-project',
+        label: "Play TTIAKAP prototype",
+        href: "https://inaff25252.itch.io/personal-project",
         external: true,
       },
       {
-        label: 'Play Spaced Out',
-        href: 'https://inaff25252.itch.io/spaced-out',
+        label: "Play Spaced Out",
+        href: "https://inaff25252.itch.io/spaced-out",
         external: true,
       },
-      { label: 'Game project page', href: '/unity' },
+      { label: "Game project page", href: "/unity" },
     ],
     reflection:
-      'Rhythm games were harder than expected because timing changed after upload. That taught me to test in the same environment players use and to build calibration or timing buffers earlier.',
+      "TTIAKAP was very difficult, especially since it was a game snippet. Players often gave the feedback that they didn't understand the plot or their tasks. This would be fixed once I add in dialouge, but as a snippet it's not perfect.",
   },
   {
-    slug: 'cuddlebox',
-    title: 'CuddleBox',
-    subtitle: 'A business centered on cactus-based leather goods and teaching crafting skills.',
-    image: '/images/CuddleBox.PNG',
-    alt: 'CuddleBox brand logo and project preview',
+    slug: "cuddlebox",
+    title: "CuddleBox",
+    subtitle: "A business centered on cactus-based leather goods and teaching crafting skills.",
+    image: "/images/CuddleBox.PNG",
+    alt: "CuddleBox brand logo and project preview",
     caption:
-      'CuddleBox presents cactus-based leather plush craft kits, packaging, product photos, and a flippable 3D business card.',
+      "CuddleBox presents cactus-based leather plush craft kits, packaging, product photos, and a flippable 3D business card.",
     problem:
-      'CuddleBox was made for people who like handmade goods but may feel intimidated by leatherworking. The goal was to turn a material experiment into a friendly product system with clear packaging, approachable branding, and beginner-ready kits.',
+      "CuddleBox was made for people who like handmade goods but may feel intimidated by leatherworking. The goal was to turn a material into approachable and beginner-ready kits.",
     approach: [
-      'Combined physical prototyping with digital presentation: kit layouts, product photography, brand logo work, and a Vue page that documents the product line.',
-      'Used CSS 3D transforms for an interactive business card so the portfolio demonstrates both the front/back design and the interaction in one component.',
-      'Kept the project page media-driven because buyers and makers need to see materials, patterns, tools, and final plush examples before understanding the concept.',
+      "Combined physical prototyping with digital presentation: kit layouts, product photography, brand logo work, and a Vue page that documents the product line.",
+      "Used CSS 3D transforms for an interactive business card so the portfolio demonstrates both the front/back design and the interaction in one component.",
+      "Kept the project page media-driven because buyers and makers need to see materials, patterns, tools, and final plush examples to understand the concept.",
     ],
-    links: [{ label: 'View CuddleBox project', href: '/cuddle-box' }],
+    links: [{ label: "View CuddleBox project", href: "/cuddle-box" }],
     reflection:
-      'The biggest challenge was making the kit feel simple without hiding the craft. I learned that instructions, packaging, and product photos are part of the user experience.',
+      "The biggest challenge was making the kit feel simple but still highlight the craft. I learned that instructions could never be clear enough, and I kept worrying about needing more clarifying explanations. Having product defects without a way to reimburse customers also made me anxious. So, I made sure to make clear youtube tutorials, as well as my contact in every kit with a business card.",
   },
   {
-    slug: 'pet-pastel',
-    title: 'Pet Pastel',
+    slug: "pet-pastel",
+    title: "Pet Pastel",
     subtitle:
-      'A nonprofit 501(c)(3) dedicated to local animal shelters through animal galleries and commissions.',
-    image: '/images/PetPastel.jpeg',
-    alt: 'Pet Pastel charity gallery preview',
+      "A nonprofit 501(c)(3) dedicated to local animal shelters through animal galleries and commissions.",
+    image: "/images/PetPastel.jpeg",
+    alt: "Pet Pastel charity gallery preview",
     caption:
-      'Pet Pastel documents charity galleries, pet portrait commissions, press coverage, and shelter-centered fundraising.',
+      "Pet Pastel documents charity galleries, pet portrait commissions, press coverage, and shelter-centered fundraising.",
     problem:
-      'Pet Pastel serves local animal shelters and pet owners by turning artwork into fundraising. The project needed to explain the mission, show proof of events, and make the organization feel trustworthy to donors, volunteers, and press.',
+      "Pet Pastel serves local animal shelters and pet owners by turning artwork into fundraising. The project needed to explain the mission, show proof of events, and make the organization feel trustworthy to donors, volunteers, and press.",
     approach: [
-      'Built a dedicated Vue project page with image and video media cards so gallery posters, group photos, commissions, and event clips can be read in sequence.',
-      'Linked live public proof points including Instagram, SILive coverage, and peta2 coverage to support credibility beyond the portfolio itself.',
-      'Wrote captions around outcomes, such as raising $2,300 for the ACC of NYC, so the page communicates impact instead of only showing images.',
+      "Built a dedicated Vue project page with image and video media cards so gallery posters, group photos, commissions, and event clips can be read in sequence.",
+      "Linked live public proof points including Instagram, SILive coverage, and peta2 coverage to support credibility beyond the portfolio itself.",
+      "Wrote captions around outcomes, such as raising $3,800 for the ACC of NYC, so the page communicates impact instead of only showing images.",
     ],
     links: [
-      { label: 'View Pet Pastel project', href: '/pet-pastel' },
+      { label: "View Pet Pastel project", href: "/pet-pastel" },
       {
-        label: 'Pet Pastel Instagram',
-        href: 'https://www.instagram.com/pet_pastel_/',
+        label: "Pet Pastel Instagram",
+        href: "https://www.instagram.com/pet_pastel_/",
         external: true,
       },
       {
-        label: 'SILive gallery coverage',
-        href: 'https://www.silive.com/galleries/RVARCU3EXNA6JCNYGHHJ6WHGG4/',
+        label: "SILive gallery coverage",
+        href: "https://www.silive.com/galleries/RVARCU3EXNA6JCNYGHHJ6WHGG4/",
         external: true,
       },
     ],
     reflection:
-      'The hardest part was coordinating art, people, promotion, and a real nonprofit goal at the same time. I learned that communication and follow-through matter as much as creative skill.',
+      "The hardest part was coordinating art, people, promotion, and a real nonprofit goal at the same time. I learned that communication and follow-through matter as much as creative skill.",
   },
 ]
 
 const supportingProjects = [
-  { label: 'Blender Works', to: '/cad' },
-  { label: 'Logo Works', to: '/art/logo' },
-  { label: 'Door Painting Club', to: '/art/door-painting-club' },
-  { label: 'Music Activities', to: '/music' },
+  { label: "Blender Works", to: "/cad" },
+  { label: "Logo Works", to: "/art/logo" },
+  { label: "Door Painting Club", to: "/art/door-painting-club" },
+  { label: "Music Activities", to: "/music" },
 ]
 
 const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date))
