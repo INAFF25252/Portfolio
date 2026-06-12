@@ -44,20 +44,20 @@ const posts: BlogPost[] = [
     author: "Chen Xi He",
     topic: "Technical Learning",
     summary:
-      "Build notes from my school GitHub repo — how nested Supabase selects load teachers, classes, enrollments, and students in one request instead of many.",
+      "How nested Supabase selects load teachers, classes, enrollments, and students in one request instead of many.",
     sections: [
       {
         heading: "What the school repo organizes",
         paragraphs: [
           "My school repo (github.com/INAFF25252/school) is a Next.js app backed by Supabase. It models how a school is organized: teachers, students, classes, and enrollments that connect students to the classes they take. Each class belongs to one teacher, and enrollments link a student row to a class row through foreign keys.",
-          "The classes page needs the full picture at once — every teacher, the classes they teach, and which students are enrolled in each class. My first instinct was to query one table at a time in JavaScript: load teachers, then fetch classes per teacher, then enrollments per class, then students per enrollment. That worked on a small dataset but meant a lot of separate Supabase calls and awkward stitching on the client.",
+          "The classes page needs every teacher, the classes they teach, and which students are enrolled in each class. My first instinct was to query one table at a time in JavaScript: load teachers, then fetch classes per teacher, then enrollments per class, then students per enrollment. That worked on a small dataset but meant a lot of separate Supabase calls and awkward stitching on the client.",
         ],
       },
       {
         heading: "Relational queries: one call through the relationships",
         paragraphs: [
           "Because Supabase uses Postgres under the hood, I can follow foreign keys in a single nested select. Starting from teachers, I ask for related classes, then enrollments inside each class, then student info inside each enrollment. Supabase returns one JSON tree that already matches how the UI thinks about the data.",
-          "Relational queries are better than multiple calls here because the database joins rows close to the source. I send one HTTP request, get one consistent snapshot of teachers and their rosters, and avoid an N+1 pattern where network latency multiplies with every teacher or class. Separate calls also make error handling harder — one failed student lookup can leave a half-built list on screen.",
+          "Relational queries are better than multiple calls here because the database joins rows close to the source. I send one HTTP request, get one consistent snapshot of teachers and their rosters, and avoid an N+1 pattern where network latency multiplies with every teacher or class. Separate calls also make error handling harder since one failed student lookup can leave a half-built list on screen.",
         ],
       },
       {
